@@ -1,0 +1,18 @@
+{
+  version: 2,
+  mediaFileName: '20250128_100052.mp4',
+  cutSegments: [
+    {
+      start: 0,
+      end: 29.44343228915663,
+      name: '',
+      selected: true,
+    },
+    {
+      start: 29.44343228915663,
+      end: 61.095122,
+      name: '',
+      selected: true,
+    },
+  ],
+}
