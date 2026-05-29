@@ -4,6 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "sync:fotos": "node scripts/sync-fotos.mjs",
+    "sync:dokumente": "node scripts/sync-dokumente.mjs",
+    "predev": "npm run sync:fotos && npm run sync:dokumente",
+    "prebuild": "npm run sync:fotos && npm run sync:dokumente",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",

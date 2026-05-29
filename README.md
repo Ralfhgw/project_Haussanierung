@@ -6,10 +6,12 @@ Dieses Projekt migriert die Inhalte aus `project_Haussanierung` in ein Vite-Setu
 
 - React Login in `src/App.tsx`
 - Benutzer-Hashes aus dem alten Projekt in `src/data/users.ts`
-- Originale Inhaltsseite als statische Datei: `public/legacy-index.html`
+- ATG-Komponente in `src/components/Atg.tsx`
+- Eingebundene ATG-HTML-Datei in `src/assets/atg.html`
 - Originale Styles und Medien:
   - `public/css/styles.css`
-  - `public/images/*`
+  - `public/images/atg/*`
+  - `public/images/fotos/*`
 
 ## Lokal starten
 

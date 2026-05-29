@@ -1,0 +1,112 @@
+.kosten {
+  display: grid;
+  gap: 20px;
+}
+
+.kosten-header {
+  display: grid;
+  gap: 10px;
+}
+
+.kosten-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #2c79cf;
+}
+
+.kosten h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #163250;
+}
+
+.kosten p {
+  margin: 0;
+  color: #58789a;
+  line-height: 1.7;
+}
+
+.kosten-summary {
+  display: grid;
+  gap: 6px;
+  padding: 20px 22px;
+  border-radius: 22px;
+  border: 1px solid rgba(95, 136, 183, 0.12);
+  background: linear-gradient(180deg, rgba(239, 247, 255, 0.98), rgba(223, 238, 255, 0.92));
+  box-shadow: 0 18px 34px rgba(35, 76, 126, 0.06);
+}
+
+.kosten-summary span {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #34699c;
+}
+
+.kosten-summary strong {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: #163250;
+  font-variant-numeric: tabular-nums;
+}
+
+.kosten-table-wrap {
+  overflow-x: auto;
+  border-radius: 24px;
+  border: 1px solid rgba(95, 136, 183, 0.1);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 34px rgba(35, 76, 126, 0.06);
+}
+
+.kosten-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+}
+
+.kosten-table thead {
+  background: linear-gradient(180deg, rgba(236, 246, 255, 0.98), rgba(222, 238, 255, 0.94));
+}
+
+.kosten-table th,
+.kosten-table td {
+  padding: 16px 18px;
+  text-align: left;
+  border-bottom: 1px solid rgba(95, 136, 183, 0.1);
+}
+
+.kosten-table th {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #34699c;
+}
+
+.kosten-table td {
+  color: #244a72;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.kosten-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.kosten-table tbody tr:hover td {
+  background: rgba(243, 249, 255, 0.95);
+}
+
+@media (max-width: 900px) {
+  .kosten-table-wrap {
+    border-radius: 20px;
+  }
+}
+
+.kosten-table th:nth-child(5),
+.kosten-table td:nth-child(5) {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
