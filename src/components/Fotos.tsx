@@ -25,7 +25,7 @@ const dateTimeFormatter = new Intl.DateTimeFormat('de-DE', {
 
 const mediaEntries: MediaEntry[] = PHOTO_FILENAMES.map((filename) => {
   const match = filename.match(
-    /^(?<year>\d{4})(?<month>\d{2})(?<day>\d{2})_(?<hour>\d{2})(?<minute>\d{2})(?<second>\d{2})\.(?<extension>[a-z0-9]+)$/i,
+    /^(?<year>\d{4})(?<month>\d{2})(?<day>\d{2})_(?<hour>\d{2})(?<minute>\d{2})(?<second>\d{2})(?:[-_][^.]+)?\.(?<extension>[a-z0-9]+)$/i,
   )
 
   if (!match?.groups) {

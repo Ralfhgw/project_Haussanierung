@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { compare } from 'bcryptjs'
 import { APP_USERS } from './data/users'
 import Atg from './components/Atg'
 import Dokumente from './components/Dokumente'
@@ -60,7 +59,10 @@ function App() {
         return
       }
 
-      const passwordMatches = await compare(password, user.passwordHash)
+      const passwordMatches = await window.dcodeIO.bcrypt.compare(
+        password,
+        user.passwordHash,
+      )
 
       if (!passwordMatches) {
         setError('Ungültige Zugangsdaten.')
