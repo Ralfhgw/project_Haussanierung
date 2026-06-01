@@ -30,11 +30,51 @@ const PROJECT_AREAS = [
   },
 ]
 
-const PROJECT_STEPS = [
-  'Austausch der Stromverkabelung im Haus',
-  'Dokumentation der Anschlüsse',
-  'Installation eines neuen Sicherungkastens',
-  'Zweitbesichtigung des Kellers durch ATG im August 2026',
+const HOUSE_DRAWINGS = [
+  {
+    title: 'Animation Erdgeschoss',
+    href: '/zeichnungen/Animation Erdgeschoss.pdf',
+  },
+  {
+    title: 'Animation KG und EG und Dachkonstruktion',
+    href: '/zeichnungen/Animation KG und EG und Dachkonstruktion.pdf',
+  },
+  {
+    title: 'Animation Kellergeschoss',
+    href: '/zeichnungen/Animation Kellergeschoss.pdf',
+  },
+  {
+    title: 'Animation mit Wintergarten',
+    href: '/zeichnungen/Animation mit Wintergarten.pdf',
+  },
+  {
+    title: 'Drahtmodell Bauwerk',
+    href: '/zeichnungen/Drahtmodell Bauwerk.pdf',
+  },
+  {
+    title: 'EG Grundriss mit Wintergarten',
+    href: '/zeichnungen/EG Grundriss mit Wintergarten.pdf',
+  },
+  {
+    title: 'Grundriss Erdgeschoss',
+    href: '/zeichnungen/Grundriss ERDGESCHOSS.pdf',
+  },
+  {
+    title: 'Grundriss Kellergeschoss',
+    href: '/zeichnungen/Grundriss KELLERGESCHOSS.pdf',
+  },
+  {
+    title: 'Wintergarten System 3D - 1',
+    href: '/zeichnungen/Wintergarten System 3D -1.pdf',
+  },
+  {
+    title: 'Wintergarten System 3D - 2',
+    href: '/zeichnungen/Wintergarten System 3D-2.pdf',
+  },
+  {
+    title: 'Wintergarten Systemschnitt',
+    href: '/zeichnungen/Wintergarten Systemschnitt.pdf',
+  },
 ]
 
 function App() {
@@ -227,15 +267,21 @@ function App() {
               </article>
 
               <aside className="panel timeline-panel">
-                <div className="panel-heading">
-                  <p className="section-kicker">Nächste Schritte</p>
-                  <h3>Empfohlene Struktur für Inhalte</h3>
+                <div>
+                  <div>
+                    <p className="section-kicker">Technische Zeichnungen</p>
+                    <p>Direktzugriff auf die hinterlegten PDF-Dokumente des Hauses.</p>
+                  </div>
+                  <ul className="drawing-links-list">
+                    {HOUSE_DRAWINGS.map((drawing) => (
+                      <li key={drawing.href}>
+                        <a href={drawing.href} target="_blank" rel="noreferrer">
+                          {drawing.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <ol className="steps-list">
-                  {PROJECT_STEPS.map((step) => (
-                    <li key={step}>{step}</li>
-                  ))}
-                </ol>
               </aside>
             </section>
           </div>
