@@ -90,6 +90,31 @@
   background: rgba(255, 255, 255, 0.78);
 }
 
+.kosten-invoice-link,
+.kosten-invoice-text {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+}
+
+.kosten-invoice-link {
+  color: #1b5f9e;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+
+.kosten-invoice-link:hover,
+.kosten-invoice-link:focus-visible {
+  color: #0f4679;
+  border-color: currentColor;
+}
+
+.kosten-invoice-text {
+  color: #58789a;
+}
+
 .kosten-table tbody tr:last-child td {
   border-bottom: 0;
 }

@@ -1,169 +1,370 @@
 import './Kosten.css'
 
-const COST_ENTRIES = [
-    {
+type CostEntry = {
+  date: string
+  market: string
+  invoice: {
+    label: string
+    href: string | null
+  }
+  description: string
+  price: string
+}
+
+const COST_ENTRIES: CostEntry[] = [
+  {
+    date: '05.06.2026',
+    market: 'Voltking',
+    invoice: {
+      label: 'Beleg',
+      href: '/documents/20260605_Voltking.pdf',
+    },
+    description: 'Voxura Unterputz-Gerätedose Schalterdose Verbindungsdose mit Stutzen Ø 60mm 62mm Tiefe tief UP M25 schwarz 100 Stück',
+    price: '38,50 EUR',
+  },
+  {
+    date: '05.06.2026',
+    market: 'DER Fuchs GmbH',
+    invoice: {
+      label: 'Beleg',
+      href: '/documents/20260605_Fuchs_GmbH.pdf',
+    },
+    description: '1000 Schnellbauschrauben, Grobgewinde 3,9 x 35 mm für Holzunterkonstruktionen im Trockenbau',
+    price: '16,10 EUR',
+  },
+  {
+    date: '01.06.2026',
+    market: 'Amazon',
+    invoice: {
+      label: 'Beleg',
+      href: '/documents/20260601_SiChuanErMuQian.pdf',
+    },
+    description: 'HAFRILY Bosch Schleifteller 125mm Klett 8-Loch für Bosch',
+    price: '12,97 EUR',
+  },
+  {
+    date: '28.05.2026',
+    market: 'Amazon',
+    invoice: {
+      label: 'Beleg',
+      href: '/documents/20260530_Amazon.pdf',
+    },
+    description: '3 x Kopp Abzweigdose Profi-Pack 10x Aufputz für den Feuchtraum 75 x 75 x 40mm',
+    price: '33,69 EUR',
+  },
+  {
     date: '28.05.2026',
     market: 'obi',
-    invoice: 'Beleg',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
     description: '2 x Feuchtraumleitung 100m',
     price: '134,62 EUR',
   },
   {
     date: '28.05.2026',
     market: 'toom',
-    invoice: '0104689268',
+    invoice: {
+      label: '0104689268',
+      href: null,
+    },
     description: 'Art. 7200120 15 St. Glattkantbretter gehFi/Ta 18x100x2000mm',
     price: '74,70 EUR',
   },
-    {
+  {
     date: '23.05.2026',
     market: 'toom',
-    invoice: 'Beleg',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
     description: '1 x Kabelverschraubung',
     price: '4,69 EUR',
   },
-      {
+  {
     date: '22.05.2026',
     market: 'toom',
-    invoice: 'Beleg',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
     description: '1 x Sicherungskasten',
     price: '49,99 EUR',
   },
-        {
+  {
     date: '22.05.2026',
     market: 'toom',
-    invoice: 'Beleg',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
     description: '3 x Steckdosen Aqua',
     price: '8,97 EUR',
   },
-          {
+  {
     date: '21.05.2026',
     market: 'toom',
-    invoice: 'Beleg',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
     description: '1 x SPS Senkkopfschrauben 4,5 x 20',
     price: '12,79 EUR',
   },
-            {
+  {
+    date: '19.05.2026',
+    market: 'Amazon',
+    invoice: {
+      label: 'Beleg',
+      href: '/documents/20260519_Amazon.pdf',
+    },
+    description: 'Bosch Professional Diamanttrennscheibe Standard for Universal',
+    price: '49,25 EUR',
+  },
+
+  {
+    date: '19.05.2026',
+    market: 'OBI',
+    invoice: {
+      label: 'Beleg',
+      href: '/documents/20260519_Obi.pdf',
+    },
+    description: 'Kabelkanal 110 x 60 x 2000mm grau',
+    price: '167,77 EUR',
+  },
+
+  {
+    date: '16.05.2026',
+    market: 'Toom',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Feuchtraumkabel NYM-J 3x1,5 50m',
+    price: '36,99 EUR',
+  },
+
+  {
+    date: '11.05.2026',
+    market: 'Thomas Erfurth',
+    invoice: {
+      label: 'Beleg',
+      href: '/documents/20260511_Thomas_Erfurth.pdf',
+    },
+    description: 'TE-Office 32 Stück Kabel Aufkleber Label Etiketten Selbstklebend',
+    price: '5,95 EUR',
+  },
+  {
+    date: '29.04.2026',
+    market: 'Amazon',
+    invoice: {
+      label: 'Beleg',
+      href: '/dokumente/20160429_Amazon.pdf',
+    },
+    description: 'REV AquaStorm, Serienschalter, Lichtschalter Feuchtraum IP55, einpolig, Aufputz, 230V, 10A, anthrazit',
+    price: '6,64 EUR',
+  },
+  {
+    date: '29.04.2026',
+    market: 'Amazon',
+    invoice: {
+      label: 'Beleg',
+      href: '/dokumente/20160429_Amazon.pdf',
+    },
+    description: 'Kopp Abzweigdose Profi-Pack 10x Aufputz für den Feuchtraum 75 x 75 x 40mm',
+    price: '9,90 EUR',
+  },
+    {
+    date: '27.04.2026',
+    market: 'Amazon',
+    invoice: {
+      label: 'Beleg',
+      href: '/dokumente/20260427_C-E-E Manufaktur.pdf',
+    },
+    description: 'WAGO 221 Starter-Set | 20x Verbindungsklemmen',
+    price: '34,02 EUR',
+  },
+  {
     date: '25.04.2026',
     market: 'toom',
-    invoice: 'Beleg',
-    description: '1 x Sägeblatt für Säbelsäge',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: '1 x SÃ¤geblatt fÃ¼r SÃ¤belsÃ¤ge',
     price: '17,99 EUR',
   },
   {
     date: '11.10.2025',
     market: 'toom',
-    invoice: 'Beleg',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
     description: '1 x Bauplane 4x6m',
     price: '14,99 EUR',
   },
-    {
+  {
     date: '09.10.2025',
     market: 'toom',
-    invoice: 'Beleg',
-    description: '2 x Lüsterklemme',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: '2 x LÃ¼sterklemme',
     price: '5,78 EUR',
   },
   {
     date: '30.09.2025',
     market: 'toom',
-    invoice: 'Beleg',
-    description: '3 x Feuchtraumplane für Abdeckung draußen',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: '3 x Feuchtraumplane fÃ¼r Abdeckung drauÃŸen',
     price: '21,93 EUR',
   },
   {
     date: '30.09.2025',
     market: 'toom',
-    invoice: 'Beleg',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
     description: '3 x Acryl weiss',
     price: '5,97 EUR',
   },
   {
     date: '30.09.2025',
     market: 'toom',
-    invoice: 'Beleg',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
     description: '1 x Senkpfschrauben 5,0 x 40',
     price: '15,49 EUR',
   },
   {
     date: '30.09.2025',
     market: 'toom',
-    invoice: 'Beleg',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
     description: '1 x Handschuhe',
     price: '5,99 EUR',
   },
   {
     date: '11.08.2025',
     market: 'toom',
-    invoice: 'Beleg',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
     description: '1 x Senkopfschrauben 3,5 x 20',
     price: '5,69 EUR',
   },
   {
     date: '04.08.2025',
     market: 'toom',
-    invoice: 'Beleg',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
     description: '3 x Bodenausgleichmasse 1 - 40mm 22kg',
     price: '71,97 EUR',
   },
   {
     date: '28.07.2025',
     market: 'toom',
-    invoice: 'Beleg',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
     description: '1 x Feuchtraumplane',
     price: '7,31 EUR',
   },
   {
     date: '28.07.2025',
     market: 'toom',
-    invoice: 'Beleg',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
     description: '1 x Acryl weiss',
     price: '9,30 EUR',
   },
   {
     date: '23.07.2025',
     market: 'toom',
-    invoice: 'Beleg',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
     description: '3 x Acryl weiss',
     price: '5,97 EUR',
   },
   {
     date: '07.07.2025',
     market: 'obi',
-    invoice: 'Beleg',
-    description: '3 x Brettschichtholz SI Fichte für Bodentreppe',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: '3 x Brettschichtholz SI Fichte fÃ¼r Bodentreppe',
     price: '94,41 EUR',
   },
   {
     date: '05.07.2025',
     market: 'toom',
-    invoice: 'Beleg',
-    description: '1 x Müllsack',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: '1 x MÃ¼llsack',
     price: '8,49 EUR',
   },
   {
     date: '05.07.2025',
     market: 'toom',
-    invoice: 'Beleg',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
     description: '3 x Feuchtraumplane',
     price: '21,93 EUR',
   },
   {
     date: '11.06.2025',
     market: 'obi',
-    invoice: 'Beleg',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
     description: 'Hebeleisen 400mm',
     price: '30,78 EUR',
   },
   {
     date: '11.06.2025',
     market: 'obi',
-    invoice: 'Beleg',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
     description: 'Japan Nageleisen',
     price: '30,78 EUR',
   },
-
-
+    {
+    date: '10.03.2025',
+    market: 'Toom',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Akku Bohrschrauber',
+    price: '99,99 EUR',
+  },
 ]
 
 const parseEuroAmount = (price: string) =>
@@ -184,7 +385,7 @@ export default function Kosten() {
     <section className="kosten">
       <div className="kosten-header">
         <p className="kosten-kicker">Kosten</p>
-        <h3>Kostenübersicht</h3>
+        <h3>KostenÃ¼bersicht</h3>
         <p>
           Hier werden Belege und Ausgaben strukturiert gesammelt, damit
           die Projektkosten schnell nachvollziehbar bleiben.
@@ -209,10 +410,23 @@ export default function Kosten() {
           </thead>
           <tbody>
             {COST_ENTRIES.map((entry) => (
-              <tr key={`${entry.date}-${entry.invoice}`}>
+              <tr key={`${entry.date}-${entry.market}-${entry.invoice.label}`}>
                 <td>{entry.date}</td>
                 <td>{entry.market}</td>
-                <td>{entry.invoice}</td>
+                <td>
+                  {entry.invoice.href ? (
+                    <a
+                      className="kosten-invoice-link"
+                      href={entry.invoice.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {entry.invoice.label}
+                    </a>
+                  ) : (
+                    <span className="kosten-invoice-text">{entry.invoice.label}</span>
+                  )}
+                </td>
                 <td>{entry.description}</td>
                 <td>{entry.price}</td>
               </tr>
