@@ -10,8 +10,8 @@ const AUTH_KEY = 'haussanierung-auth-token'
 type Tab = 'start' | 'atg' | 'kosten' | 'dokumente' | 'fotos'
 
 const PROJECT_STATS = [
-  { label: 'Projektphase', value: 'Innenausbau' },
-  { label: 'Nächster Termin', value: 'Anschluss der neu verlegten Stromleitungen' },
+  { label: 'Projektphase', value: 'Innenausbau (Stromnetzerneuerung)' },
+  { label: 'Nächster Termin', value: '23.06.2026 17:00 Uhr - Anwohnerversammlung, Straßensanierung' },
   { label: 'Dokumentation', value: 'Firmenverträge und Rechnungen sind über den Tab Dokumente abrufbar.' },
 ]
 
@@ -22,7 +22,7 @@ const PROJECT_AREAS = [
   },
   {
     title: 'Abstimmungen',
-    text: 'in Vorbereitung...',
+    text: 'Hager ZB32ET215W2 Komplettscharnk wird bestellt.' ,
   },
   {
     title: 'Dokumente & Fotos',
