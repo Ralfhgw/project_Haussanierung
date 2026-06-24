@@ -7,7 +7,7 @@ import Kosten from './components/Kosten'
 import './App.css'
 
 const AUTH_KEY = 'haussanierung-auth-token'
-type Tab = 'start' | 'atg' | 'kosten' | 'dokumente' | 'fotos'
+type Tab = 'start' | 'kosten' | 'dokumente' | 'fotos' | 'atg'
 type ExpandableListItem = {
   label: string
   children: string[]
@@ -32,7 +32,7 @@ const PROJECT_AREAS: ProjectArea[] = [
   },
   {
     title: 'Aktuelles',
-    text: 'Hager ZB32ET215W2 Komplettscharnk wurde geliefert.' ,
+    text: 'Hager ZB32ET215W2 Komplettschrank wurde geliefert.' ,
   },
   {
     title: 'Abstimmungen',
@@ -224,12 +224,6 @@ function App() {
           Startseite
         </button>
         <button
-          className={tab === 'atg' ? 'tab active' : 'tab'}
-          onClick={() => setTab('atg')}
-        >
-          ATG
-        </button>
-        <button
           className={tab === 'kosten' ? 'tab active' : 'tab'}
           onClick={() => setTab('kosten')}
         >
@@ -247,6 +241,12 @@ function App() {
         >
           Fotos
         </button>
+                <button
+          className={tab === 'atg' ? 'tab active' : 'tab'}
+          onClick={() => setTab('atg')}
+        >
+          ATG
+        </button>
       </nav>
 
       <section className="tab-content">
@@ -257,17 +257,16 @@ function App() {
                 <p className="section-kicker">Startseite</p>
                 <h2>Projektübersicht</h2>
                 <p>
-                  Diese Startseite dient als Einstieg in das Projekt und
+                  Diese Startseite ist der Einstieg in das Projekt und
                   fasst die wichtigsten Bereiche direkt sichtbar zusammen.
                 </p>
               </div>
 
               <div className="hero-highlight">
                 <span className="highlight-label">Aktueller Fokus</span>
-                <strong>Transparente Projektsteuerung</strong>
+                <strong>Trockenbau</strong>
                 <p>
-                  Status, Kosten und Fotodokumentation sind hier zentral
-                  gebündelt und auf einen Blick nachvollziehbar.
+                  Nach der Entfernung der Deckenplatten, muss die Zwischenwand versetzt werden. Dafür sind Maurerarbeiten notwendig, um den Durchbruch für die Tür im Vorfeld zu machen. Die Stelle für die Montage des Sicherungskastens soll vorbereitet werden. Verbesserungen an der oberen Wandkante sollen besprochen werden.
                 </p>
               </div>
             </section>
