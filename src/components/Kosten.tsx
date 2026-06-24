@@ -13,6 +13,36 @@ type CostEntry = {
 
 const COST_ENTRIES: CostEntry[] = [
   {
+    date: '23.06.2026',
+    market: 'REMONDIS',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Entsorgung Gipskartonplatten / Rigips 170 kg',
+    price: '53,90 EUR',
+  },
+  {
+    date: '19.06.2026',
+    market: 'REMONDIS',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Entsorgung Gipskartonplatten / Rigips 140 kg',
+    price: '45,33 EUR',
+  },
+  {
+    date: '19.06.2026',
+    market: 'REMONDIS',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Entsorgung Gipskartonplatten / Rigips Pauschalpreis',
+    price: '5,00 EUR',
+  },
+  {
     date: '05.06.2026',
     market: 'Voltking',
     invoice: {
@@ -385,7 +415,7 @@ export default function Kosten() {
     <section className="kosten">
       <div className="kosten-header">
         <p className="kosten-kicker">Kosten</p>
-        <h3>KostenÃ¼bersicht</h3>
+        <h3>Kostenübersicht</h3>
         <p>
           Hier werden Belege und Ausgaben strukturiert gesammelt, damit
           die Projektkosten schnell nachvollziehbar bleiben.

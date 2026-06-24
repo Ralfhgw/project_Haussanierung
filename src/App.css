@@ -282,8 +282,12 @@
 
 .overview-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
+}
+
+.overview-item:last-child {
+  grid-column: 1 / -1;
 }
 
 .overview-item {
@@ -296,6 +300,71 @@
 .overview-item h4 {
   margin: 0 0 10px;
   color: #18436d;
+}
+
+.expandable-list {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.expandable-list-item {
+  display: grid;
+  gap: 10px;
+}
+
+.expandable-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid rgba(95, 136, 183, 0.16);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.82);
+  color: #18436d;
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.expandable-trigger:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(35, 76, 126, 0.08);
+  border-color: rgba(73, 160, 255, 0.28);
+  background: rgba(248, 252, 255, 0.98);
+}
+
+.expandable-trigger[aria-expanded="true"] {
+  border-color: rgba(73, 160, 255, 0.34);
+  background: rgba(235, 245, 255, 0.92);
+}
+
+.expandable-icon {
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.expandable-sublist {
+  margin: 0;
+  padding: 0 0 0 18px;
+  display: grid;
+  gap: 8px;
+  color: #58789a;
+}
+
+.expandable-sublist li {
+  line-height: 1.6;
 }
 
 .steps-list {

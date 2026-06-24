@@ -8,25 +8,49 @@ import './App.css'
 
 const AUTH_KEY = 'haussanierung-auth-token'
 type Tab = 'start' | 'atg' | 'kosten' | 'dokumente' | 'fotos'
+type ExpandableListItem = {
+  label: string
+  children: string[]
+}
+
+type ProjectArea = {
+  title: string
+  text?: string
+  items?: ExpandableListItem[]
+}
 
 const PROJECT_STATS = [
   { label: 'Projektphase', value: 'Innenausbau (Stromnetzerneuerung)' },
-  { label: 'Nächster Termin', value: '23.06.2026 17:00 Uhr - Anwohnerversammlung, Straßensanierung' },
+  { label: 'Nächster Termin', value: '24.06.2026 - Suche nach Trockenbauer / Maurer für Kleinauftrag' },
   { label: 'Dokumentation', value: 'Firmenverträge und Rechnungen sind über den Tab Dokumente abrufbar.' },
 ]
 
-const PROJECT_AREAS = [
+const PROJECT_AREAS: ProjectArea[] = [
   {
     title: 'Baufortschritt',
-    text: 'Momentan läuft die Erneuerung der Stromleitungen. Es waren ursprünglich Aluminiumkabel verlegt worden und ohne gelb/grün. ',
+    text: 'Momentan läuft die Erneuerung der Stromleitungen. Es waren ursprünglich Aluminiumkabel verlegt worden und ohne gelb/grün. Deckenplatten wurden im Wohnzimmer entfernt.',
+  },
+  {
+    title: 'Aktuelles',
+    text: 'Hager ZB32ET215W2 Komplettscharnk wurde geliefert.' ,
   },
   {
     title: 'Abstimmungen',
-    text: 'Hager ZB32ET215W2 Komplettscharnk wird bestellt.' ,
-  },
-  {
-    title: 'Dokumente & Fotos',
-    text: 'Bilder, Kosten und externe Inhalte sind über die entsprechenden Tabs erreichbar.',
+    items: [
+      {
+        label: '23.06.2026 - Anwohnerversammlung - Straßensanierung',
+        children: [
+          'Haupt-Trinkwasserversorgung wird erneuert und die Grundstücke angebunden.',
+          'Haupt-Stromleitung wird erneuert und die Grundstücke angebunden.',
+          'Verlegung von Leerrohren für den späteren Breitbandausbau.',
+          'Dauer der Baumaßnahme bis Weihnachten 2027 und Startbeginn 20.07.2026',
+          'Mülltonnen / Gelbe Säcke bis 07:00 rausstellen, Bauleute transportieren diese zum Sammelpunkt',
+          'Bei Problemen an Herrn Müller-Tittel wenden',
+          '1 x pro Woche ist Bauberatungaller Gewerke + Ing.-Büro',
+          'Optional (auf eigene Kosten) - zwei Anschlussschächte für Schmutz- und Regenwasser, ca. 1m hinter Grundstückgrenze'
+        ],
+      },
+    ],
   },
 ]
 
@@ -82,6 +106,7 @@ function App() {
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
+  const [expandedItems, setExpandedItems] = useState<Record<string, boolean>>({})
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
     if (typeof window === 'undefined') return false
     return Boolean(window.localStorage.getItem(AUTH_KEY))
@@ -124,6 +149,12 @@ function App() {
 
   const [tab, setTab] = useState<Tab>('start')
 
+  const toggleItem = (key: string) => {
+    setExpandedItems((current) => ({
+      ...current,
+      [key]: !current[key],
+    }))
+  }
   if (!isAuthenticated) {
     return (
       <main className="auth-page">
@@ -254,13 +285,43 @@ function App() {
               <article className="panel overview-panel">
                 <div className="panel-heading">
                   <p className="section-kicker">Überblick</p>
-                  <h3>Was auf der Startseite sichtbar ist...</h3>
                 </div>
                 <div className="overview-list">
                   {PROJECT_AREAS.map((area) => (
                     <article key={area.title} className="overview-item">
                       <h4>{area.title}</h4>
-                      <p>{area.text}</p>
+                      {area.text ? <p>{area.text}</p> : null}
+                      {area.items?.length ? (
+                        <ul className="expandable-list">
+                          {area.items.map((item) => {
+                            const itemKey = area.title + '-' + item.label
+                            const isExpanded = Boolean(expandedItems[itemKey])
+
+                            return (
+                              <li key={itemKey} className="expandable-list-item">
+                                <button
+                                  type="button"
+                                  className="expandable-trigger"
+                                  onClick={() => toggleItem(itemKey)}
+                                  aria-expanded={isExpanded}
+                                >
+                                  <span>{item.label}</span>
+                                  <span className="expandable-icon" aria-hidden="true">
+                                    {isExpanded ? '-' : '+'}
+                                  </span>
+                                </button>
+                                {isExpanded ? (
+                                  <ul className="expandable-sublist">
+                                    {item.children.map((child) => (
+                                      <li key={child}>{child}</li>
+                                    ))}
+                                  </ul>
+                                ) : null}
+                              </li>
+                            )
+                          })}
+                        </ul>
+                      ) : null}
                     </article>
                   ))}
                 </div>
