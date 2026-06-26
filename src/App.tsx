@@ -56,6 +56,10 @@ const PROJECT_AREAS: ProjectArea[] = [
 
 const HOUSE_DRAWINGS = [
   {
+    title: 'Hausanschlüsse Strom, Gas und Trinkwasser',
+    href: '/zeichnungen/Strom-Gas-Trinkwasser.pdf',
+  },
+  {
     title: 'Animation Erdgeschoss',
     href: '/zeichnungen/Animation Erdgeschoss.pdf',
   },
