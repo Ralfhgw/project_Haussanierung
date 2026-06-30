@@ -23,11 +23,14 @@ const filenames = (await readdir(fotosDir))
   .filter((filename) => supportedExtensions.has(path.extname(filename).toLowerCase()))
   .sort((left, right) => left.localeCompare(right))
 
-const output = `${[
-  'export const PHOTO_FILENAMES = [',
-  ...filenames.map((filename) => `  '${filename}',`),
-  '] as const',
-  '',
-].join('\n')}`
+const output = `export type PhotoEntry = {
+  filename: string
+  description?: string
+}
+
+export const PHOTO_ENTRIES: readonly PhotoEntry[] = [
+${filenames.map((filename) => `  { filename: '${filename}' },`).join('\n')}
+] as const
+`
 
 await writeFile(outputPath, output, 'utf8')

@@ -1,10 +1,11 @@
-import { PHOTO_FILENAMES } from '../data/fotos'
+import { PHOTO_ENTRIES } from '../data/fotos'
 import './Fotos.css'
 
 type MediaKind = 'image' | 'video'
 
 type MediaEntry = {
   capturedAt: Date
+  description?: string
   displayDate: string
   filename: string
   kind: MediaKind
@@ -23,7 +24,7 @@ const dateTimeFormatter = new Intl.DateTimeFormat('de-DE', {
   timeStyle: 'short',
 })
 
-const mediaEntries: MediaEntry[] = PHOTO_FILENAMES.map((filename) => {
+const mediaEntries: MediaEntry[] = PHOTO_ENTRIES.map(({ filename, description }) => {
   const match = filename.match(
     /^(?<year>\d{4})(?<month>\d{2})(?<day>\d{2})_(?<hour>\d{2})(?<minute>\d{2})(?<second>\d{2})(?:[-_][^.]+)?\.(?<extension>[a-z0-9]+)$/i,
   )
@@ -53,6 +54,7 @@ const mediaEntries: MediaEntry[] = PHOTO_FILENAMES.map((filename) => {
 
   return {
     capturedAt,
+    description,
     displayDate: dateTimeFormatter.format(capturedAt),
     filename,
     kind: (extension.toLowerCase() === 'mp4' ? 'video' : 'image') as MediaKind,
@@ -127,7 +129,10 @@ export default function Fotos() {
                 )}
 
                 <div className="photo-meta">
-                  <strong>{item.displayDate}</strong>
+                  <div>
+                    <strong>{item.displayDate}</strong>
+                    {item.description && <p>{item.description}</p>}
+                  </div>
                   <span>{item.kind === 'video' ? 'Video' : 'Bild'}</span>
                 </div>
               </article>
