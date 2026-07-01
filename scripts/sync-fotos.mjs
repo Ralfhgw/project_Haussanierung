@@ -36,11 +36,8 @@ try {
 }
 
 const entries = filenames.map((filename) => {
-  const existingDescription = existingDescriptions[filename]
-  if (existingDescription !== undefined && existingDescription !== '') {
-    return `  { filename: '${filename}', description: '${existingDescription}' },`
-  }
-  return `  { filename: '${filename}' },`
+  const existingDescription = existingDescriptions[filename] ?? ''
+  return `  { filename: '${filename}', description: '${existingDescription}' },`
 })
 
 const output = `export type PhotoEntry = {

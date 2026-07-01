@@ -88,6 +88,10 @@ const HOUSE_DRAWINGS = [
     href: '/zeichnungen/Grundriss ERDGESCHOSS.pdf',
   },
   {
+    title: 'Grundriss Erdgeschoss Planung',
+    href: '/zeichnungen/EG_Grundriss_Planung.pdf',
+  },
+  {
     title: 'Grundriss Kellergeschoss',
     href: '/zeichnungen/Grundriss KELLERGESCHOSS.pdf',
   },
