@@ -13,6 +13,46 @@ type CostEntry = {
 
 const COST_ENTRIES: CostEntry[] = [
   {
+    date: '07.07.2026',
+    market: 'Toom',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: '3151236 - Schnellputzleiste verzinkt 2500 x 6 x 20 mm',
+    price: '2,49 EUR',
+  },
+  {
+    date: '07.07.2026',
+    market: 'Toom',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: '3157198 - Innenputzeckleiste 150 x 3,5 x 3,5 cm',
+    price: '1,49 EUR',
+  },
+  {
+    date: '07.07.2026',
+    market: 'Toom',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: '3150088 - PVC-Eckschutzprofil 250 x 2,3 x 2,3 cm',
+    price: '2,99 EUR',
+  },
+  {
+    date: '07.07.2026',
+    market: 'Toom',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: '1100221 - Richtlatte Aluminium 2 m',
+    price: '23,99 EUR',
+  },
+  {
     date: '23.06.2026',
     market: 'REMONDIS',
     invoice: {
