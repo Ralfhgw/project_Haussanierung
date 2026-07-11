@@ -52,6 +52,36 @@ const COST_ENTRIES: CostEntry[] = [
     description: '1100221 - Richtlatte Aluminium 2 m',
     price: '23,99 EUR',
   },
+    {
+    date: '07.07.2026',
+    market: 'Toom',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Drahtbürste V2A-Stahl 5-reihig',
+    price: '5,79 EUR',
+  },
+  {
+    date: '06.07.2026',
+    market: 'BAUHAUS',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Scheppach Renovierungsschleifer MRS1300',
+    price: '79,00 EUR',
+  },
+  {
+    date: '27.06.2026',
+    market: 'Toom',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Müllsäcke 120 l 25 Stück',
+    price: '8,49 EUR',
+  },
   {
     date: '23.06.2026',
     market: 'REMONDIS',
@@ -82,6 +112,37 @@ const COST_ENTRIES: CostEntry[] = [
     description: 'Entsorgung Gipskartonplatten / Rigips Pauschalpreis',
     price: '5,00 EUR',
   },
+  {
+    date: '16.06.2026',
+    market: 'TOOM',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Spanplattenschrauben Basic Ø 5,0 x 50 mm TX25 100 Stück',
+    price: '13,29 EUR',
+  },
+    {
+    date: '16.06.2026',
+    market: 'TOOM',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Müllsäcke 120 l 25 Stück',
+    price: '8,49 EUR',
+  },
+  {
+    date: '13.06.2026',
+    market: 'Toom',
+    invoice: {
+      label: 'Beleg',
+      href: 'null',
+    },
+    description: 'Müllbeutel 240 l',
+    price: '6,49 EUR',
+  },
+
   {
     date: '05.06.2026',
     market: 'Voltking',

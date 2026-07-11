@@ -50,6 +50,17 @@ const PROJECT_AREAS: ProjectArea[] = [
           'Optional (auf eigene Kosten) - zwei Anschlussschächte für Schmutz- und Regenwasser, ca. 1m hinter Grundstückgrenze'
         ],
       },
+      {
+        label: '10.07.2026 - Telefongespräch Energieberatung Fuchs & Eule',
+        children: [
+          'Termin 14:00 Uhr - Gespräch mit Laura Barnowski',
+          'Erstgespräch mit Abfrage der Grunddaten des Hauses',
+          'Als nächstes wird die Bafa Förderung eingereicht.',
+          'Vor-Ort-Termin in nächster Zeit zur Qualitätskontrolle',
+          'Firma erstellt den Sanierungsfahrplan, danach gibt es ein letztes Gespräch, bevor die Förderbescheinigung ausgehändigt wird.',
+          'Die Maßnahmen für die Umsetzung sind dann förderfähig, müssen aber von einem lizensierten Fachmann kontrolliert werden. Fuchs & Eule kann es übernehmen.'
+        ],
+      },
     ],
   },
 ]
