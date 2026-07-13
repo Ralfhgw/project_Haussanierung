@@ -1,4 +1,24 @@
 import { useState } from 'react'
+import {
+  Bell,
+  Building2,
+  CalendarClock,
+  ChevronDown,
+  Euro,
+  FileText,
+  FolderOpen,
+  Hammer,
+  Images,
+  LayoutDashboard,
+  Lock,
+  LogOut,
+  PanelsTopLeft,
+  Ruler,
+  Target,
+  TrendingUp,
+  User,
+  Users,
+} from 'lucide-react'
 import { APP_USERS } from './data/users'
 import Atg from './components/Atg'
 import Dokumente from './components/Dokumente'
@@ -8,6 +28,7 @@ import './App.css'
 
 const AUTH_KEY = 'haussanierung-auth-token'
 type Tab = 'start' | 'kosten' | 'dokumente' | 'fotos' | 'atg'
+type IconType = typeof LayoutDashboard
 type ExpandableListItem = {
   label: string
   children: string[]
@@ -15,27 +36,39 @@ type ExpandableListItem = {
 
 type ProjectArea = {
   title: string
+  icon: IconType
   text?: string
   items?: ExpandableListItem[]
 }
 
-const PROJECT_STATS = [
-  { label: 'Projektphase', value: 'Innenausbau (Stromnetzerneuerung)' },
-  { label: 'Nächster Termin', value: '24.06.2026 - Suche nach Trockenbauer / Maurer für Kleinauftrag' },
-  { label: 'Dokumentation', value: 'Firmenverträge und Rechnungen sind über den Tab Dokumente abrufbar.' },
+const TAB_ITEMS: { id: Tab; label: string; icon: IconType }[] = [
+  { id: 'start', label: 'Startseite', icon: LayoutDashboard },
+  { id: 'kosten', label: 'Kosten', icon: Euro },
+  { id: 'dokumente', label: 'Dokumente', icon: FileText },
+  { id: 'fotos', label: 'Fotos', icon: Images },
+  { id: 'atg', label: 'ATG', icon: PanelsTopLeft },
+]
+
+const PROJECT_STATS: { label: string; value: string; icon: IconType }[] = [
+  { label: 'Projektphase', value: 'Innenausbau (Stromnetzerneuerung)', icon: Hammer },
+  { label: 'Nächster Termin', value: '24.06.2026 - Suche nach Trockenbauer / Maurer für Kleinauftrag', icon: CalendarClock },
+  { label: 'Dokumentation', value: 'Firmenverträge und Rechnungen sind über den Tab Dokumente abrufbar.', icon: FolderOpen },
 ]
 
 const PROJECT_AREAS: ProjectArea[] = [
   {
     title: 'Baufortschritt',
+    icon: TrendingUp,
     text: 'Momentan läuft die Erneuerung der Stromleitungen. Es waren ursprünglich Aluminiumkabel verlegt worden und ohne gelb/grün. Deckenplatten wurden im Wohnzimmer entfernt.',
   },
   {
     title: 'Aktuelles',
+    icon: Bell,
     text: 'Hager ZB32ET215W2 Komplettschrank wurde geliefert.' ,
   },
   {
     title: 'Abstimmungen',
+    icon: Users,
     items: [
       {
         label: '23.06.2026 - Anwohnerversammlung - Straßensanierung',
@@ -178,7 +211,15 @@ function App() {
     return (
       <main className="auth-page">
         <section className="auth-card">
-          <h1>Haussanierung Klaus-Groth-Str.</h1>
+          <div className="auth-brand">
+            <span className="brand-badge">
+              <Building2 size={26} strokeWidth={2.2} />
+            </span>
+            <div>
+              <p className="eyebrow">Projektportal</p>
+              <h1>Haussanierung Klaus-Groth-Str.</h1>
+            </div>
+          </div>
           <p className="subtitle">Informationen zum Sanierungsstand</p>
 
           <form
@@ -189,24 +230,30 @@ function App() {
             }}
           >
             <label htmlFor="username">Username</label>
-            <input
-              id="username"
-              type="text"
-              value={username}
-              onChange={(event) => setUsername(event.target.value)}
-              autoComplete="username"
-              required
-            />
+            <div className="input-wrap">
+              <User size={18} className="input-icon" aria-hidden="true" />
+              <input
+                id="username"
+                type="text"
+                value={username}
+                onChange={(event) => setUsername(event.target.value)}
+                autoComplete="username"
+                required
+              />
+            </div>
 
             <label htmlFor="password">Password</label>
-            <input
-              id="password"
-              type="password"
-              value={password}
-              onChange={(event) => setPassword(event.target.value)}
-              autoComplete="current-password"
-              required
-            />
+            <div className="input-wrap">
+              <Lock size={18} className="input-icon" aria-hidden="true" />
+              <input
+                id="password"
+                type="password"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+                autoComplete="current-password"
+                required
+              />
+            </div>
 
             {error ? <p className="error">{error}</p> : null}
 
@@ -223,49 +270,35 @@ function App() {
     <main className="content-page">
       <header className="app-header">
         <div className="header-copy">
-          <p className="eyebrow">Projektportal</p>
-          <h1>Haussanierung Klaus-Groth-Str.</h1>
-          <p className="header-text">
-            Alle wichtigen Informationen zu Fortschritt, Unterlagen und
-            Abstimmungen an einem Ort.
-          </p>
+          <span className="brand-badge">
+            <Building2 size={28} strokeWidth={2.2} />
+          </span>
+          <div>
+            <p className="eyebrow">Projektportal</p>
+            <h1>Haussanierung Klaus-Groth-Str.</h1>
+            <p className="header-text">
+              Alle wichtigen Informationen zu Fortschritt, Unterlagen und
+              Abstimmungen an einem Ort.
+            </p>
+          </div>
         </div>
         <button className="logout" onClick={handleLogout}>
-          Logout
+          <LogOut size={18} aria-hidden="true" />
+          <span>Logout</span>
         </button>
       </header>
 
       <nav className="tabs">
-        <button
-          className={tab === 'start' ? 'tab active' : 'tab'}
-          onClick={() => setTab('start')}
-        >
-          Startseite
-        </button>
-        <button
-          className={tab === 'kosten' ? 'tab active' : 'tab'}
-          onClick={() => setTab('kosten')}
-        >
-          Kosten
-        </button>
-        <button
-          className={tab === 'dokumente' ? 'tab active' : 'tab'}
-          onClick={() => setTab('dokumente')}
-        >
-          Dokumente
-        </button>
-        <button
-          className={tab === 'fotos' ? 'tab active' : 'tab'}
-          onClick={() => setTab('fotos')}
-        >
-          Fotos
-        </button>
-                <button
-          className={tab === 'atg' ? 'tab active' : 'tab'}
-          onClick={() => setTab('atg')}
-        >
-          ATG
-        </button>
+        {TAB_ITEMS.map(({ id, label, icon: Icon }) => (
+          <button
+            key={id}
+            className={tab === id ? 'tab active' : 'tab'}
+            onClick={() => setTab(id)}
+          >
+            <Icon size={18} aria-hidden="true" />
+            <span>{label}</span>
+          </button>
+        ))}
       </nav>
 
       <section className="tab-content">
@@ -282,7 +315,10 @@ function App() {
               </div>
 
               <div className="hero-highlight">
-                <span className="highlight-label">Aktueller Fokus</span>
+                <span className="highlight-label">
+                  <Target size={16} aria-hidden="true" />
+                  Aktueller Fokus
+                </span>
                 <strong>Trockenbau</strong>
                 <p>
                   Nach der Entfernung der Deckenplatten, muss die Zwischenwand versetzt werden. Dafür sind Maurerarbeiten notwendig, um den Durchbruch für die Tür im Vorfeld zu machen. Die Stelle für die Montage des Sicherungskastens soll vorbereitet werden. Verbesserungen an der oberen Wandkante sollen besprochen werden.
@@ -291,10 +327,13 @@ function App() {
             </section>
 
             <section className="stats-grid" aria-label="Projektkennzahlen">
-              {PROJECT_STATS.map((item) => (
-                <article key={item.label} className="stat-card">
-                  <span>{item.label}</span>
-                  <strong>{item.value}</strong>
+              {PROJECT_STATS.map(({ label, value, icon: Icon }) => (
+                <article key={label} className="stat-card">
+                  <span className="stat-icon" aria-hidden="true">
+                    <Icon size={20} />
+                  </span>
+                  <span>{label}</span>
+                  <strong>{value}</strong>
                 </article>
               ))}
             </section>
@@ -305,9 +344,16 @@ function App() {
                   <p className="section-kicker">Überblick</p>
                 </div>
                 <div className="overview-list">
-                  {PROJECT_AREAS.map((area) => (
+                  {PROJECT_AREAS.map((area) => {
+                    const AreaIcon = area.icon
+                    return (
                     <article key={area.title} className="overview-item">
-                      <h4>{area.title}</h4>
+                      <h4>
+                        <span className="overview-icon" aria-hidden="true">
+                          <AreaIcon size={18} />
+                        </span>
+                        {area.title}
+                      </h4>
                       {area.text ? <p>{area.text}</p> : null}
                       {area.items?.length ? (
                         <ul className="expandable-list">
@@ -324,8 +370,15 @@ function App() {
                                   aria-expanded={isExpanded}
                                 >
                                   <span>{item.label}</span>
-                                  <span className="expandable-icon" aria-hidden="true">
-                                    {isExpanded ? '-' : '+'}
+                                  <span
+                                    className={
+                                      isExpanded
+                                        ? 'expandable-icon open'
+                                        : 'expandable-icon'
+                                    }
+                                    aria-hidden="true"
+                                  >
+                                    <ChevronDown size={18} />
                                   </span>
                                 </button>
                                 {isExpanded ? (
@@ -341,21 +394,28 @@ function App() {
                         </ul>
                       ) : null}
                     </article>
-                  ))}
+                    )
+                  })}
                 </div>
               </article>
 
               <aside className="panel timeline-panel">
                 <div>
-                  <div>
-                    <p className="section-kicker">Technische Zeichnungen</p>
+                  <div className="panel-heading">
+                    <p className="section-kicker">
+                      <Ruler size={16} aria-hidden="true" />
+                      Technische Zeichnungen
+                    </p>
                     <p>Direktzugriff auf die hinterlegten PDF-Dokumente des Hauses.</p>
                   </div>
                   <ul className="drawing-links-list">
                     {HOUSE_DRAWINGS.map((drawing) => (
                       <li key={drawing.href}>
                         <a href={drawing.href} target="_blank" rel="noreferrer">
-                          {drawing.title}
+                          <span className="drawing-icon" aria-hidden="true">
+                            <FileText size={18} />
+                          </span>
+                          <span className="drawing-title">{drawing.title}</span>
                         </a>
                       </li>
                     ))}
