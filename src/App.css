@@ -269,15 +269,19 @@
 }
 
 .tab {
+  width: 156px;
+  flex: 0 0 156px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 9px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 11px 20px;
+  padding: 11px 16px;
   background: rgba(255, 255, 255, 0.66);
   color: var(--blue-700);
   font-weight: 700;
+  text-align: center;
   cursor: pointer;
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(8px);
@@ -684,7 +688,8 @@
   }
 
   .tab {
-    flex: 0 0 auto;
+    width: 156px;
+    flex: 0 0 156px;
   }
 
   .hero-panel,

@@ -1,0 +1,258 @@
+.atg {
+  display: grid;
+  gap: 24px;
+}
+
+.atg-header {
+  display: grid;
+  gap: 10px;
+  max-width: 760px;
+}
+
+.atg-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #2c79cf;
+}
+
+.atg h3 {
+  margin: 0;
+  font-size: 1.7rem;
+  color: #163250;
+}
+
+.atg-header > p:last-child {
+  margin: 0;
+  color: #58789a;
+  line-height: 1.65;
+  font-size: 0.96rem;
+}
+
+.atg-content {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  font-size: 0.93rem;
+  color: #244a72;
+}
+
+.atg-layout {
+  display: grid;
+  gap: 20px;
+}
+
+.atg-panel,
+.atg-chat {
+  border-radius: 24px;
+  border: 1px solid rgba(95, 136, 183, 0.12);
+  background: linear-gradient(180deg, rgba(250, 253, 255, 0.98), rgba(232, 242, 255, 0.92));
+  box-shadow: 0 18px 34px rgba(35, 76, 126, 0.08);
+}
+
+.atg-panel {
+  display: grid;
+  gap: 12px;
+  padding: 24px;
+}
+
+.atg-panel h2,
+.atg-divider h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #163250;
+}
+
+.atg-panel h3,
+.atg-divider h3 {
+  margin: 4px 0 0;
+  font-size: 1.05rem;
+  color: #1c4d7d;
+}
+
+.atg-panel p,
+.atg-panel ul,
+.atg-divider p {
+  margin: 0;
+  color: #35506e;
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+.atg-panel ul,
+.atg-list {
+  padding-left: 1.15rem;
+}
+
+.atg-panel li,
+.atg-list li {
+  margin: 0.2rem 0;
+}
+
+.atg-chat {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+}
+
+.atg-chat-header {
+  display: grid;
+  gap: 6px;
+  padding: 4px 6px 12px;
+  border-bottom: 1px solid rgba(95, 136, 183, 0.14);
+}
+
+.atg-chat-label {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2c79cf;
+}
+
+.atg-chat-hint {
+  margin: 0;
+  color: #5d7c9d;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.atg-entry {
+  display: flex;
+}
+
+.atg-entry__bubble {
+  width: min(100%, 940px);
+  display: grid;
+  gap: 10px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(95, 136, 183, 0.12);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 12px 24px rgba(35, 76, 126, 0.06);
+}
+
+.atg-entry--owner .atg-entry__bubble {
+  border-left: 4px solid #2f7ee6;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(236, 245, 255, 0.94));
+}
+
+.atg-entry--partner .atg-entry__bubble {
+  border-left: 4px solid #a12d40;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(236, 251, 250, 0.94));
+}
+
+.atg-entry--neutral .atg-entry__bubble {
+  border-left: 4px solid #9bc78a;
+}
+
+.atg-entry__meta {
+  margin: 0;
+  color: #1e4b76;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.atg-entry__text {
+  margin: 0;
+  color: #35506e;
+  font-size: 0.9rem;
+  line-height: 1.62;
+}
+
+.atg-divider {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 14px 8px 2px;
+}
+
+.atg-media {
+  margin: 2px 0 0;
+  width: min(100%, 540px);
+  max-width: 100%;
+}
+
+.atg-media img,
+.atg-media video {
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+  display: block;
+  border-radius: 16px;
+  object-fit: contain;
+  background: linear-gradient(180deg, rgba(232, 242, 255, 0.9), rgba(214, 230, 248, 0.9));
+  border: 1px solid rgba(95, 136, 183, 0.16);
+  box-shadow: 0 10px 22px rgba(35, 76, 126, 0.08);
+}
+
+.atg-audio {
+  width: min(100%, 540px);
+}
+
+.atg-audio audio {
+  width: 100%;
+  display: block;
+}
+
+.atg-content a {
+  color: #1d63c7;
+  font-weight: 700;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.atg-content a:hover {
+  text-decoration: underline;
+}
+
+.atg-content strong {
+  color: #153d63;
+}
+
+.atg-content code {
+  padding: 0.16rem 0.42rem;
+  border-radius: 8px;
+  background: rgba(230, 240, 252, 0.9);
+  color: #21476f;
+  font-size: 0.95em;
+}
+
+@media (max-width: 720px) {
+  .atg h3 {
+    font-size: 1.5rem;
+  }
+
+  .atg-panel,
+  .atg-chat {
+    border-radius: 20px;
+  }
+
+  .atg-panel {
+    padding: 18px;
+  }
+
+  .atg-chat {
+    padding: 14px;
+  }
+
+  .atg-entry__bubble {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .atg-media,
+  .atg-audio {
+    width: 100%;
+  }
+
+  .atg-media img,
+  .atg-media video {
+    max-height: none;
+  }
+}

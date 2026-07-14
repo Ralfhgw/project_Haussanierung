@@ -11,6 +11,7 @@ const outputPath = path.resolve(__dirname, '../src/data/dokumente.ts')
 const filenames = (await readdir(dokumenteDir))
   .filter((filename) => filename !== '.gitkeep')
   .filter((filename) => filename !== 'descriptions.json')
+  .filter((filename) => !/^\d{8}/.test(filename))
   .sort((left, right) => left.localeCompare(right))
 
 const output = `export const DOCUMENT_FILENAMES = [

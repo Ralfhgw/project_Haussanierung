@@ -13,7 +13,7 @@ type CostEntry = {
 
 const COST_ENTRIES: CostEntry[] = [
   {
-    date: '07.07.2026',
+    date: '--',
     market: 'Toom',
     invoice: {
       label: 'Beleg',
@@ -23,7 +23,7 @@ const COST_ENTRIES: CostEntry[] = [
     price: '2,49 EUR',
   },
   {
-    date: '07.07.2026',
+    date: '--',
     market: 'Toom',
     invoice: {
       label: 'Beleg',
@@ -33,7 +33,7 @@ const COST_ENTRIES: CostEntry[] = [
     price: '1,49 EUR',
   },
   {
-    date: '07.07.2026',
+    date: '--',
     market: 'Toom',
     invoice: {
       label: 'Beleg',
@@ -43,7 +43,7 @@ const COST_ENTRIES: CostEntry[] = [
     price: '2,99 EUR',
   },
   {
-    date: '07.07.2026',
+    date: '--',
     market: 'Toom',
     invoice: {
       label: 'Beleg',
@@ -52,7 +52,17 @@ const COST_ENTRIES: CostEntry[] = [
     description: '1100221 - Richtlatte Aluminium 2 m',
     price: '23,99 EUR',
   },
-    {
+  {
+    date: '08.07.2026',
+    market: 'Fanztool GmbH',
+    invoice: {
+      label: 'Beleg',
+      href: '/documents/20260708_Betonschleifer.pdf',
+    },
+    description: 'FANZWORK Betonschleifer Betonfräse Set mit Diamantschleiftopf und Absaughaube (1500W/125mm+)',
+    price: '129,99 EUR',
+  },
+  {
     date: '07.07.2026',
     market: 'Toom',
     invoice: {
@@ -71,6 +81,46 @@ const COST_ENTRIES: CostEntry[] = [
     },
     description: 'Scheppach Renovierungsschleifer MRS1300',
     price: '79,00 EUR',
+  },
+  {
+    date: '05.07.2026',
+    market: 'Hornbach',
+    invoice: {
+      label: 'Beleg',
+      href: '/documents/20260705_Signaldeckel.pdf',
+    },
+    description: 'Signaldeckel für Unterputz- dosen 60mm, VPE = 50 Stück',
+    price: '9,84 EUR',
+  },
+  {
+    date: '04.07.2026',
+    market: 'Hornbach',
+    invoice: {
+      label: 'Beleg',
+      href: '/documents/20260704_Hornbach.pdf',
+    },
+    description: '2 x PRECIT Armierungsgewebe alkalibeständig 145 g/m² 4,5 x 4 mm weiß 50 x 1 m',
+    price: '89,90 EUR',
+  },
+  {
+    date: '04.07.2026',
+    market: 'Hornbach',
+    invoice: {
+      label: 'Beleg',
+      href: '/documents/20260704_Hornbach.pdf',
+    },
+    description: '2 x Ho NN Acryl Tiefgrund KF 10L',
+    price: '29,90 EUR',
+  },
+  {
+    date: '04.07.2026',
+    market: 'Hornbach',
+    invoice: {
+      label: 'Beleg',
+      href: '/documents/20260704_Hornbach.pdf',
+    },
+    description: 'Knauf SM700 PRO Klebe- und Armiermörtel weiß 25kg Pal.= 42 Sack',
+    price: '339 EUR',
   },
   {
     date: '27.06.2026',
@@ -122,7 +172,7 @@ const COST_ENTRIES: CostEntry[] = [
     description: 'Spanplattenschrauben Basic Ø 5,0 x 50 mm TX25 100 Stück',
     price: '13,29 EUR',
   },
-    {
+  {
     date: '16.06.2026',
     market: 'TOOM',
     invoice: {
@@ -164,6 +214,16 @@ const COST_ENTRIES: CostEntry[] = [
     price: '16,10 EUR',
   },
   {
+    date: '04.06.2026',
+    market: 'Amazon',
+    invoice: {
+      label: 'Beleg',
+      href: '/documents/20260604_Unterputzdose.pdf',
+    },
+    description: 'Voxura Unterputz-Gerätedose Schalterdose Verbindungsdose mit Stutzen Ø 60mm 62mm Tiefe tief UP M25 schwarz 100 Stück SKU: Voxura-K01-0020-01_4260741330019_100er',
+    price: '6,15 EUR',
+  },
+  {
     date: '01.06.2026',
     market: 'Amazon',
     invoice: {
@@ -172,6 +232,26 @@ const COST_ENTRIES: CostEntry[] = [
     },
     description: 'HAFRILY Bosch Schleifteller 125mm Klett 8-Loch für Bosch',
     price: '12,97 EUR',
+  },
+  {
+    date: '30.05.2026',
+    market: 'Amazon',
+    invoice: {
+      label: 'Beleg',
+      href: '/documents/20260530_Schleifteller.pdf',
+    },
+    description: 'HAFRILY Bosch Schleifteller 125mm Klett 8-Loch für Bosch Pex 400 AE/Pex 300 AE Ersatz Schleifplatte mit Hook für Bosch Exzenterschleifer',
+    price: '8,98 EUR',
+  },
+  {
+    date: '29.05.2026',
+    market: 'Amazon',
+    invoice: {
+      label: 'Beleg',
+      href: '/documents/20260518_Scheibe für Fräse.pdf',
+    },
+    description: 'Kopp Abzweigdose Profi-Pack 10x Aufputz für den Feuchtraum 75 x 75 x 40mm spritzwassergeschützte Kabelabzweigdosen IP54 Verbindungsdosen mit 12 Kabeleinführungen grau 340604504 Kunststoff',
+    price: '9,90 EUR',
   },
   {
     date: '28.05.2026',
@@ -245,17 +325,6 @@ const COST_ENTRIES: CostEntry[] = [
   },
   {
     date: '19.05.2026',
-    market: 'Amazon',
-    invoice: {
-      label: 'Beleg',
-      href: '/documents/20260519_Amazon.pdf',
-    },
-    description: 'Bosch Professional Diamanttrennscheibe Standard for Universal',
-    price: '49,25 EUR',
-  },
-
-  {
-    date: '19.05.2026',
     market: 'OBI',
     invoice: {
       label: 'Beleg',
@@ -263,6 +332,16 @@ const COST_ENTRIES: CostEntry[] = [
     },
     description: 'Kabelkanal 110 x 60 x 2000mm grau',
     price: '167,77 EUR',
+  },
+  {
+    date: '18.05.2026',
+    market: 'Amazon',
+    invoice: {
+      label: 'Beleg',
+      href: '/documents/20260518_Scheibe für Fräse.pdf',
+    },
+    description: '4 x Bosch Professional Diamanttrennscheibe Standard for Universal (Beton und Mauerwerk, 150 x 22,23 mm, Zubehör Winkelschleifer)',
+    price: '49,25 EUR',
   },
 
   {
@@ -306,7 +385,7 @@ const COST_ENTRIES: CostEntry[] = [
     description: 'Kopp Abzweigdose Profi-Pack 10x Aufputz für den Feuchtraum 75 x 75 x 40mm',
     price: '9,90 EUR',
   },
-    {
+  {
     date: '27.04.2026',
     market: 'Amazon',
     invoice: {
@@ -323,7 +402,7 @@ const COST_ENTRIES: CostEntry[] = [
       label: 'Beleg',
       href: null,
     },
-    description: '1 x SÃ¤geblatt fÃ¼r SÃ¤belsÃ¤ge',
+    description: '1 x Sägeblatt für Säbelsäge',
     price: '17,99 EUR',
   },
   {
@@ -343,7 +422,7 @@ const COST_ENTRIES: CostEntry[] = [
       label: 'Beleg',
       href: null,
     },
-    description: '2 x LÃ¼sterklemme',
+    description: '2 x Lüsterklemme',
     price: '5,78 EUR',
   },
   {
@@ -353,7 +432,7 @@ const COST_ENTRIES: CostEntry[] = [
       label: 'Beleg',
       href: null,
     },
-    description: '3 x Feuchtraumplane fÃ¼r Abdeckung drauÃŸen',
+    description: '3 x Feuchtraumplane für Abdeckung draußen',
     price: '21,93 EUR',
   },
   {
@@ -443,7 +522,7 @@ const COST_ENTRIES: CostEntry[] = [
       label: 'Beleg',
       href: null,
     },
-    description: '3 x Brettschichtholz SI Fichte fÃ¼r Bodentreppe',
+    description: '3 x Brettschichtholz SI Fichte für Bodentreppe',
     price: '94,41 EUR',
   },
   {
@@ -453,7 +532,7 @@ const COST_ENTRIES: CostEntry[] = [
       label: 'Beleg',
       href: null,
     },
-    description: '1 x MÃ¼llsack',
+    description: '1 x Müllsack',
     price: '8,49 EUR',
   },
   {
@@ -486,7 +565,7 @@ const COST_ENTRIES: CostEntry[] = [
     description: 'Japan Nageleisen',
     price: '30,78 EUR',
   },
-    {
+  {
     date: '10.03.2025',
     market: 'Toom',
     invoice: {

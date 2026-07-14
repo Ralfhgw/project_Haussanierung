@@ -10,6 +10,7 @@ import {
   Hammer,
   Images,
   LayoutDashboard,
+  Lightbulb,
   Lock,
   LogOut,
   PanelsTopLeft,
@@ -23,11 +24,12 @@ import { APP_USERS } from './data/users'
 import Atg from './components/Atg'
 import Dokumente from './components/Dokumente'
 import Fotos from './components/Fotos'
+import Ideen from './components/Ideen'
 import Kosten from './components/Kosten'
 import './App.css'
 
 const AUTH_KEY = 'haussanierung-auth-token'
-type Tab = 'start' | 'kosten' | 'dokumente' | 'fotos' | 'atg'
+type Tab = 'start' | 'kosten' | 'dokumente' | 'fotos' | 'ideen' | 'atg'
 type IconType = typeof LayoutDashboard
 type ExpandableListItem = {
   label: string
@@ -46,13 +48,14 @@ const TAB_ITEMS: { id: Tab; label: string; icon: IconType }[] = [
   { id: 'kosten', label: 'Kosten', icon: Euro },
   { id: 'dokumente', label: 'Dokumente', icon: FileText },
   { id: 'fotos', label: 'Fotos', icon: Images },
+  { id: 'ideen', label: 'Ideen', icon: Lightbulb },
   { id: 'atg', label: 'ATG', icon: PanelsTopLeft },
 ]
 
 const PROJECT_STATS: { label: string; value: string; icon: IconType }[] = [
   { label: 'Projektphase', value: 'Innenausbau (Stromnetzerneuerung)', icon: Hammer },
-  { label: 'Nächster Termin', value: '24.06.2026 - Suche nach Trockenbauer / Maurer für Kleinauftrag', icon: CalendarClock },
-  { label: 'Dokumentation', value: 'Firmenverträge und Rechnungen sind über den Tab Dokumente abrufbar.', icon: FolderOpen },
+  { label: 'Nächster Termin', value: '17.07.2026 - Energetische Objektbesichtigung', icon: CalendarClock },
+  { label: 'Dokumentation', value: 'Firmenverträge und -rechnungen sind über den Tab Dokumente einsehbar. Enstandene Materialkosten sind über den Tab Kosten abrufbar.', icon: FolderOpen },
 ]
 
 const PROJECT_AREAS: ProjectArea[] = [
@@ -435,6 +438,8 @@ function App() {
         {tab === 'dokumente' && <Dokumente />}
 
         {tab === 'fotos' && <Fotos />}
+
+        {tab === 'ideen' && <Ideen />}
 
       </section>
     </main>

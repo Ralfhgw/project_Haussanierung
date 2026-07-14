@@ -1,0 +1,5 @@
+Checkliste Ideen
+
+- Prioritaeten abstimmen
+- Abhaengigkeiten dokumentieren
+- Externe Angebote und Notizen hier sammeln
