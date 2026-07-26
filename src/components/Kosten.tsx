@@ -43,7 +43,17 @@ const COST_ENTRIES: CostEntry[] = [
     price: '2,99 EUR',
   },
   {
-    date: '--',
+    date: '17.07.2026',
+    market: 'Toom',
+    invoice: {
+      label: 'Beleg',
+      href: 'null',
+    },
+    description: 'Inneneckenkelle, Maurerkelle 180mm, Edelstahlkratzer',
+    price: '30,97 EUR',
+  },
+  {
+    date: '16.07.2026',
     market: 'Toom',
     invoice: {
       label: 'Beleg',
