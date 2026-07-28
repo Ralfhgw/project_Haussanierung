@@ -7,6 +7,7 @@ export const DOCUMENT_FILENAMES = [
   '2026-07-08_Fuchs&Eule - Angebot.pdf',
   '2026-07-08_Fuchs&Eule - Beispiel_Sanierungsfahrplan.pdf',
   '2026-07-08_IRB_Metallbau - Angebot.pdf',
+  '2026-07-28_Elektroverkabelung.pdf',
 ] as const
 
 export type DocumentDescriptionMap = Record<string, string>
