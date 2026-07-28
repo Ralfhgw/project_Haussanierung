@@ -261,7 +261,7 @@ function App() {
             {error ? <p className="error">{error}</p> : null}
 
             <button type="submit" disabled={loading}>
-              {loading ? 'Login laeuft...' : 'Login'}
+              {loading ? 'Login läuft...' : 'Login'}
             </button>
           </form>
         </section>

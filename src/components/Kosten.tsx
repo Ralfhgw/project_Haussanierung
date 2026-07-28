@@ -43,11 +43,41 @@ const COST_ENTRIES: CostEntry[] = [
     price: '2,99 EUR',
   },
   {
+    date: '27.07.2026',
+    market: 'REMONDIS',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Annahme Gipskartonplatten',
+    price: '51,04 EUR',
+  },
+  {
+    date: '27.07.2026',
+    market: 'Toom',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: '5411183180710 Acryl weiss',
+    price: '1,99 EUR',
+  },
+  {
+    date: '27.07.2026',
+    market: 'Toom',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: '4337256129558 SPS Seko 5,0 x 60',
+    price: '17,79 EUR',
+  },
+  {
     date: '17.07.2026',
     market: 'Toom',
     invoice: {
       label: 'Beleg',
-      href: 'null',
+      href: null,
     },
     description: 'Inneneckenkelle, Maurerkelle 180mm, Edelstahlkratzer',
     price: '30,97 EUR',

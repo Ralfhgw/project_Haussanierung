@@ -1,5 +1,5 @@
 Checkliste Ideen
 
-- Prioritaeten abstimmen
-- Abhaengigkeiten dokumentieren
+- Prioritäten abstimmen
+- Abhängigkeiten dokumentieren
 - Externe Angebote und Notizen hier sammeln

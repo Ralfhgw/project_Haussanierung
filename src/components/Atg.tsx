@@ -1846,7 +1846,7 @@ function formatAtgContent(source: string) {
   const chatHint = doc.createElement('p')
   chatHint.className = 'atg-chat-hint'
   chatHint.textContent =
-    'Nachrichten, Medien und Dokumente sind in einzelne Eintraege gegliedert.'
+    'Nachrichten, Medien und Dokumente sind in einzelne Einträge gegliedert.'
   chatHeader.appendChild(chatHint)
 
   chat.appendChild(chatHeader)
@@ -1932,7 +1932,7 @@ export default function Atg() {
         <h3>Kellersanierung und Verlauf</h3>
         <p>
           Der Verlauf ist kompakter gesetzt, Nachrichten sind als einzelne
-          Eintraege getrennt und Medien werden in einer ruhigeren Groesse
+          Einträge getrennt und Medien werden in einer ruhigeren Größe
           dargestellt.
         </p>
       </div>

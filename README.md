@@ -38,4 +38,4 @@ npm run preview
 5. Deploy ausfuehren.
 
 
-Hinweis: Das Login laeuft hier clientseitig (ohne Node/Bun-Server), damit das Projekt als Vite-App direkt auf Vercel deploybar ist.
+Hinweis: Das Login läuft hier clientseitig (ohne Node/Bun-Server), damit das Projekt als Vite-App direkt auf Vercel deploybar ist.
