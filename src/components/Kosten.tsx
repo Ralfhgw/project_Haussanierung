@@ -43,6 +43,36 @@ const COST_ENTRIES: CostEntry[] = [
     price: '2,99 EUR',
   },
   {
+    date: '29.07.2026',
+    market: 'OBI',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Knauf Bau- & Elektriker -Gips 5 kg',
+    price: '7,29 EUR',
+  },
+  {
+    date: '29.07.2026',
+    market: 'OBI',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Installations-, Elektro- und Stromkabel NYM-J 5 x 1,5 mm² 50 m Grau',
+    price: '59,99 EUR',
+  },
+  {
+    date: '29.07.2026',
+    market: 'OBI',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Nagelscheibe 50 Stück',
+    price: '14,99 EUR',
+  },
+  {
     date: '27.07.2026',
     market: 'REMONDIS',
     invoice: {
