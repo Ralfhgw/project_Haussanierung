@@ -67,7 +67,7 @@ const PROJECT_AREAS: ProjectArea[] = [
   {
     title: 'Aktuelles',
     icon: Bell,
-    text: 'Hager ZB32ET215W2 Komplettschrank wurde geliefert.' ,
+    text: 'Die Grundreinigung der Wände in WZ, GZ, SW ist abgeschlossen. Es beginnt die Tiefengrundierung und Kabelverlegung.' ,
   },
   {
     title: 'Abstimmungen',

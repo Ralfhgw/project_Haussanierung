@@ -16,6 +16,31 @@ const atgContent = `
             <li>Entsorgung</li>
             <li>Kellersanierung</li>
         </ul>
+
+        <p>Gewerbeanmeldung ab 01.05.2020<br>
+        Lange Straße 6<br>
+        18195 Tessin<br>
+        <br>
+        ab 06.03.2024 neue Adresse:<br>
+        Fritz-Reuter-Straße 27<br>
+        18190 Sanitz<br>
+        <br>
+        Tel. 0174 9544416<br>
+        stefanreinsch1@web.de<br>
+        stefanlindgreen1@web.de<br>
+        <br>
+        Jens Lindgreen<br>
+        Fassadengestaltung & Maurerarbeiten<br>
+        OT Starkow 3A <br>
+        18165 Thalkow<br>
+        <br>
+        Weitere Kunde mit Rechnung für Carport<br>
+        Olga Demani<br>
+        Am Storchenhof 4<br>
+        18184 Thulendorf<br>
+        <br>
+        Rechtsanwalt Rainer Haas & Kollegen Rechtsanwaltgesellschaft MBH<p>
+
         <h3>Chat Verlauf</h3>
         <p>08.07.25, 08:25 - S. Lingreen - Stefan Lindgreen
             sparkasse Rostock
@@ -1722,225 +1747,223 @@ const atgContent = `
 `
 
 const CHAT_HEADER_PATTERN =
-  /^\d{2}\.\d{2}\.\d{2,4}(?:,?\s*\d{1,2}:\d{2})?(?:\s*-\s*|:\s*)/
+    /^\d{2}\.\d{2}\.\d{2,4}(?:,?\s*\d{1,2}:\d{2})?(?:\s*-\s*|:\s*)/
 
 function normalizeText(value: string) {
-  return value.replace(/\s+/g, ' ').trim()
+    return value.replace(/\s+/g, ' ').trim()
 }
 
 function isMessageHeader(element: Element | null) {
-  if (!element || element.tagName !== 'P') {
-    return false
-  }
+    if (!element || element.tagName !== 'P') {
+        return false
+    }
 
-  return CHAT_HEADER_PATTERN.test(normalizeText(element.textContent ?? ''))
+    return CHAT_HEADER_PATTERN.test(normalizeText(element.textContent ?? ''))
 }
 
 function createMessageEntry(doc: Document, headerText: string) {
-  const article = doc.createElement('article')
-  article.className = 'atg-entry'
+    const article = doc.createElement('article')
+    article.className = 'atg-entry'
 
-  if (headerText.includes('R. Neumann')) {
-    article.classList.add('atg-entry--owner')
-  } else if (headerText.includes('S. Lingreen')) {
-    article.classList.add('atg-entry--partner')
-  } else {
-    article.classList.add('atg-entry--neutral')
-  }
+    if (headerText.includes('R. Neumann')) {
+        article.classList.add('atg-entry--owner')
+    } else if (headerText.includes('S. Lingreen')) {
+        article.classList.add('atg-entry--partner')
+    } else {
+        article.classList.add('atg-entry--neutral')
+    }
 
-  const bubble = doc.createElement('div')
-  bubble.className = 'atg-entry__bubble'
-  article.appendChild(bubble)
+    const bubble = doc.createElement('div')
+    bubble.className = 'atg-entry__bubble'
+    article.appendChild(bubble)
 
-  return { article, bubble }
+    return { article, bubble }
 }
 
 function appendFormattedNode(
-  doc: Document,
-  target: HTMLElement,
-  sourceNode: ChildNode,
+    doc: Document,
+    target: HTMLElement,
+    sourceNode: ChildNode,
 ) {
-  if (sourceNode.nodeType === Node.TEXT_NODE) {
-    const text = normalizeText(sourceNode.textContent ?? '')
+    if (sourceNode.nodeType === Node.TEXT_NODE) {
+        const text = normalizeText(sourceNode.textContent ?? '')
 
-    if (!text) {
-      return
+        if (!text) {
+            return
+        }
+
+        const paragraph = doc.createElement('p')
+        paragraph.className = 'atg-entry__text'
+        paragraph.textContent = text
+        target.appendChild(paragraph)
+        return
     }
 
-    const paragraph = doc.createElement('p')
-    paragraph.className = 'atg-entry__text'
-    paragraph.textContent = text
-    target.appendChild(paragraph)
-    return
-  }
+    if (sourceNode.nodeType !== Node.ELEMENT_NODE) {
+        return
+    }
 
-  if (sourceNode.nodeType !== Node.ELEMENT_NODE) {
-    return
-  }
+    const sourceElement = sourceNode as HTMLElement
 
-  const sourceElement = sourceNode as HTMLElement
+    if (sourceElement.tagName === 'BR') {
+        return
+    }
 
-  if (sourceElement.tagName === 'BR') {
-    return
-  }
+    const element = sourceElement.cloneNode(true) as HTMLElement
 
-  const element = sourceElement.cloneNode(true) as HTMLElement
+    if (element.tagName === 'IMG' || element.tagName === 'VIDEO') {
+        const media = doc.createElement('figure')
+        media.className = 'atg-media'
+        media.appendChild(element)
+        target.appendChild(media)
+        return
+    }
 
-  if (element.tagName === 'IMG' || element.tagName === 'VIDEO') {
-    const media = doc.createElement('figure')
-    media.className = 'atg-media'
-    media.appendChild(element)
-    target.appendChild(media)
-    return
-  }
+    if (element.tagName === 'AUDIO') {
+        const audioWrap = doc.createElement('div')
+        audioWrap.className = 'atg-audio'
+        audioWrap.appendChild(element)
+        target.appendChild(audioWrap)
+        return
+    }
 
-  if (element.tagName === 'AUDIO') {
-    const audioWrap = doc.createElement('div')
-    audioWrap.className = 'atg-audio'
-    audioWrap.appendChild(element)
-    target.appendChild(audioWrap)
-    return
-  }
+    if (element.tagName === 'P') {
+        element.classList.add('atg-entry__text')
+    }
 
-  if (element.tagName === 'P') {
-    element.classList.add('atg-entry__text')
-  }
+    if (element.tagName === 'UL' || element.tagName === 'OL') {
+        element.classList.add('atg-list')
+    }
 
-  if (element.tagName === 'UL' || element.tagName === 'OL') {
-    element.classList.add('atg-list')
-  }
-
-  target.appendChild(element)
+    target.appendChild(element)
 }
 
 function formatAtgContent(source: string) {
-  if (typeof DOMParser === 'undefined') {
-    return source
-  }
-
-  const parser = new DOMParser()
-  const doc = parser.parseFromString(`<div>${source}</div>`, 'text/html')
-  const root = doc.body.firstElementChild
-
-  if (!root) {
-    return source
-  }
-
-  const wrapper = doc.createElement('div')
-  wrapper.className = 'atg-layout'
-
-  const overview = doc.createElement('section')
-  overview.className = 'atg-panel atg-panel--overview'
-
-  const chat = doc.createElement('section')
-  chat.className = 'atg-chat'
-
-  const chatHeader = doc.createElement('div')
-  chatHeader.className = 'atg-chat-header'
-
-  const chatLabel = doc.createElement('p')
-  chatLabel.className = 'atg-chat-label'
-  chatLabel.textContent = 'Chatverlauf'
-  chatHeader.appendChild(chatLabel)
-
-  const chatHint = doc.createElement('p')
-  chatHint.className = 'atg-chat-hint'
-  chatHint.textContent =
-    'Nachrichten, Medien und Dokumente sind in einzelne Einträge gegliedert.'
-  chatHeader.appendChild(chatHint)
-
-  chat.appendChild(chatHeader)
-
-  let inChat = false
-  let currentEntry: ReturnType<typeof createMessageEntry> | null = null
-
-  const flushEntry = () => {
-    if (!currentEntry) {
-      return
+    if (typeof DOMParser === 'undefined') {
+        return source
     }
 
-    chat.appendChild(currentEntry.article)
-    currentEntry = null
-  }
+    const parser = new DOMParser()
+    const doc = parser.parseFromString(`<div>${source}</div>`, 'text/html')
+    const root = doc.body.firstElementChild
 
-  for (const node of Array.from(root.childNodes)) {
-    const element = node.nodeType === Node.ELEMENT_NODE ? node as HTMLElement : null
-    const text = normalizeText(node.textContent ?? '')
-
-    if (
-      element &&
-      /^H[23]$/.test(element.tagName) &&
-      text.toLowerCase() === 'chat verlauf'
-    ) {
-      inChat = true
-      flushEntry()
-      continue
+    if (!root) {
+        return source
     }
 
-    if (!inChat) {
-      appendFormattedNode(doc, overview, node)
-      continue
+    const wrapper = doc.createElement('div')
+    wrapper.className = 'atg-layout'
+
+    const overview = doc.createElement('section')
+    overview.className = 'atg-panel atg-panel--overview'
+
+    const chat = doc.createElement('section')
+    chat.className = 'atg-chat'
+
+    const chatHeader = doc.createElement('div')
+    chatHeader.className = 'atg-chat-header'
+
+    const chatLabel = doc.createElement('p')
+    chatLabel.className = 'atg-chat-label'
+    chatLabel.textContent = 'Chatverlauf'
+    chatHeader.appendChild(chatLabel)
+
+    const chatHint = doc.createElement('p')
+    chatHint.className = 'atg-chat-hint'
+    chatHint.textContent =
+        'Nachrichten, Medien und Dokumente sind in einzelne Einträge gegliedert.'
+    chatHeader.appendChild(chatHint)
+
+    chat.appendChild(chatHeader)
+
+    let inChat = false
+    let currentEntry: ReturnType<typeof createMessageEntry> | null = null
+
+    const flushEntry = () => {
+        if (!currentEntry) {
+            return
+        }
+
+        chat.appendChild(currentEntry.article)
+        currentEntry = null
     }
 
-    if (element && /^H[23]$/.test(element.tagName)) {
-      flushEntry()
-      const headingWrap = doc.createElement('div')
-      headingWrap.className = 'atg-divider'
-      appendFormattedNode(doc, headingWrap, node)
-      chat.appendChild(headingWrap)
-      continue
+    for (const node of Array.from(root.childNodes)) {
+        const element = node.nodeType === Node.ELEMENT_NODE ? node as HTMLElement : null
+        const text = normalizeText(node.textContent ?? '')
+
+        if (
+            element &&
+            /^H[23]$/.test(element.tagName) &&
+            text.toLowerCase() === 'chat verlauf'
+        ) {
+            inChat = true
+            flushEntry()
+            continue
+        }
+
+        if (!inChat) {
+            appendFormattedNode(doc, overview, node)
+            continue
+        }
+
+        if (element && /^H[23]$/.test(element.tagName)) {
+            flushEntry()
+            const headingWrap = doc.createElement('div')
+            headingWrap.className = 'atg-divider'
+            appendFormattedNode(doc, headingWrap, node)
+            chat.appendChild(headingWrap)
+            continue
+        }
+
+        if (isMessageHeader(element)) {
+            const headerElement = element!
+
+            flushEntry()
+            currentEntry = createMessageEntry(
+                doc,
+                normalizeText(headerElement.textContent ?? ''),
+            )
+
+            const meta = doc.createElement('p')
+            meta.className = 'atg-entry__meta'
+            meta.innerHTML = headerElement.innerHTML
+            currentEntry.bubble.appendChild(meta)
+            continue
+        }
+
+        if (!currentEntry) {
+            currentEntry = createMessageEntry(doc, 'Allgemein')
+        }
+
+        appendFormattedNode(doc, currentEntry.bubble, node)
     }
 
-    if (isMessageHeader(element)) {
-      const headerElement = element!
+    flushEntry()
 
-      flushEntry()
-      currentEntry = createMessageEntry(
-        doc,
-        normalizeText(headerElement.textContent ?? ''),
-      )
+    wrapper.appendChild(overview)
+    wrapper.appendChild(chat)
 
-      const meta = doc.createElement('p')
-      meta.className = 'atg-entry__meta'
-      meta.innerHTML = headerElement.innerHTML
-      currentEntry.bubble.appendChild(meta)
-      continue
-    }
-
-    if (!currentEntry) {
-      currentEntry = createMessageEntry(doc, 'Allgemein')
-    }
-
-    appendFormattedNode(doc, currentEntry.bubble, node)
-  }
-
-  flushEntry()
-
-  wrapper.appendChild(overview)
-  wrapper.appendChild(chat)
-
-  return wrapper.innerHTML
+    return wrapper.innerHTML
 }
 
 export default function Atg() {
-  const formattedContent = useMemo(() => formatAtgContent(atgContent), [])
+    const formattedContent = useMemo(() => formatAtgContent(atgContent), [])
 
-  return (
-    <section className="atg">
-      <div className="atg-header">
-        <p className="atg-kicker">ATG</p>
-        <h3>Kellersanierung und Verlauf</h3>
-        <p>
-          Der Verlauf ist kompakter gesetzt, Nachrichten sind als einzelne
-          Einträge getrennt und Medien werden in einer ruhigeren Größe
-          dargestellt.
-        </p>
-      </div>
+    return (
+        <section className="atg">
+            <div className="atg-header">
+                <p className="atg-kicker">ATG</p>
+                <h3>Kellersanierung und Verlauf</h3>
+                <p>
+                    Diese Seite enthält die Chronik der begonnenen Keller- und Außentrockenlegung.
+                </p>
+            </div>
 
-      <div
-        className="atg-content"
-        dangerouslySetInnerHTML={{ __html: formattedContent }}
-      />
-    </section>
-  )
+            <div
+                className="atg-content"
+                dangerouslySetInnerHTML={{ __html: formattedContent }}
+            />
+        </section>
+    )
 }

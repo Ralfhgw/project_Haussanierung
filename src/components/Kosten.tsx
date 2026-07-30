@@ -127,7 +127,7 @@ const COST_ENTRIES: CostEntry[] = [
     market: 'Fanztool GmbH',
     invoice: {
       label: 'Beleg',
-      href: '/documents/20260708_Betonschleifer.pdf',
+      href: '/dokumente/20260708_Betonschleifer.pdf',
     },
     description: 'FANZWORK Betonschleifer Betonfräse Set mit Diamantschleiftopf und Absaughaube (1500W/125mm+)',
     price: '129,99 EUR',
@@ -157,7 +157,7 @@ const COST_ENTRIES: CostEntry[] = [
     market: 'Hornbach',
     invoice: {
       label: 'Beleg',
-      href: '/documents/20260705_Signaldeckel.pdf',
+      href: '/dokumente/20260705_Signaldeckel.pdf',
     },
     description: 'Signaldeckel für Unterputz- dosen 60mm, VPE = 50 Stück',
     price: '9,84 EUR',
@@ -167,7 +167,7 @@ const COST_ENTRIES: CostEntry[] = [
     market: 'Hornbach',
     invoice: {
       label: 'Beleg',
-      href: '/documents/20260704_Hornbach.pdf',
+      href: '/dokumente/20260704_Hornbach.pdf',
     },
     description: '2 x PRECIT Armierungsgewebe alkalibeständig 145 g/m² 4,5 x 4 mm weiß 50 x 1 m',
     price: '89,90 EUR',
@@ -177,7 +177,7 @@ const COST_ENTRIES: CostEntry[] = [
     market: 'Hornbach',
     invoice: {
       label: 'Beleg',
-      href: '/documents/20260704_Hornbach.pdf',
+      href: '/dokumente/20260704_Hornbach.pdf',
     },
     description: '2 x Ho NN Acryl Tiefgrund KF 10L',
     price: '29,90 EUR',
@@ -187,7 +187,7 @@ const COST_ENTRIES: CostEntry[] = [
     market: 'Hornbach',
     invoice: {
       label: 'Beleg',
-      href: '/documents/20260704_Hornbach.pdf',
+      href: '/dokumente/20260704_Hornbach.pdf',
     },
     description: 'Knauf SM700 PRO Klebe- und Armiermörtel weiß 25kg Pal.= 42 Sack',
     price: '339 EUR',
@@ -257,18 +257,27 @@ const COST_ENTRIES: CostEntry[] = [
     market: 'Toom',
     invoice: {
       label: 'Beleg',
-      href: 'null',
+      href: null,
     },
     description: 'Müllbeutel 240 l',
     price: '6,49 EUR',
   },
-
+  {
+    date: '11.06.2026',
+    market: 'Elektroshop Wagner',
+    invoice: {
+      label: 'Beleg',
+      href: '/dokumente/20260611_Hager_Sicherungskasten.pdf',
+    },
+    description: 'Hager ZB32ET215W2 Komplettschrank, universZ, 1ZP, RES, BKE-I, VT5, APZ, SLS, 63A, ESA, 1100x550x205 mm, IP44',
+    price: '619,36 EUR',
+  },
   {
     date: '05.06.2026',
     market: 'Voltking',
     invoice: {
       label: 'Beleg',
-      href: '/documents/20260605_Voltking.pdf',
+      href: '/dokumente/20260605_Voltking.pdf',
     },
     description: 'Voxura Unterputz-Gerätedose Schalterdose Verbindungsdose mit Stutzen Ø 60mm 62mm Tiefe tief UP M25 schwarz 100 Stück',
     price: '38,50 EUR',
@@ -278,7 +287,7 @@ const COST_ENTRIES: CostEntry[] = [
     market: 'DER Fuchs GmbH',
     invoice: {
       label: 'Beleg',
-      href: '/documents/20260605_Fuchs_GmbH.pdf',
+      href: '/dokumente/20260605_Fuchs_GmbH.pdf',
     },
     description: '1000 Schnellbauschrauben, Grobgewinde 3,9 x 35 mm für Holzunterkonstruktionen im Trockenbau',
     price: '16,10 EUR',
@@ -288,7 +297,7 @@ const COST_ENTRIES: CostEntry[] = [
     market: 'Amazon',
     invoice: {
       label: 'Beleg',
-      href: '/documents/20260604_Unterputzdose.pdf',
+      href: '/dokumente/20260604_Unterputzdose.pdf',
     },
     description: 'Voxura Unterputz-Gerätedose Schalterdose Verbindungsdose mit Stutzen Ø 60mm 62mm Tiefe tief UP M25 schwarz 100 Stück SKU: Voxura-K01-0020-01_4260741330019_100er',
     price: '6,15 EUR',
@@ -298,7 +307,7 @@ const COST_ENTRIES: CostEntry[] = [
     market: 'Amazon',
     invoice: {
       label: 'Beleg',
-      href: '/documents/20260601_SiChuanErMuQian.pdf',
+      href: '/dokumente/20260601_SiChuanErMuQian.pdf',
     },
     description: 'HAFRILY Bosch Schleifteller 125mm Klett 8-Loch für Bosch',
     price: '12,97 EUR',
@@ -308,7 +317,7 @@ const COST_ENTRIES: CostEntry[] = [
     market: 'Amazon',
     invoice: {
       label: 'Beleg',
-      href: '/documents/20260530_Schleifteller.pdf',
+      href: '/dokumente/20260530_Schleifteller.pdf',
     },
     description: 'HAFRILY Bosch Schleifteller 125mm Klett 8-Loch für Bosch Pex 400 AE/Pex 300 AE Ersatz Schleifplatte mit Hook für Bosch Exzenterschleifer',
     price: '8,98 EUR',
@@ -318,7 +327,7 @@ const COST_ENTRIES: CostEntry[] = [
     market: 'Amazon',
     invoice: {
       label: 'Beleg',
-      href: '/documents/20260518_Scheibe für Fräse.pdf',
+      href: '/dokumente/20260518_Scheibe für Fräse.pdf',
     },
     description: 'Kopp Abzweigdose Profi-Pack 10x Aufputz für den Feuchtraum 75 x 75 x 40mm spritzwassergeschützte Kabelabzweigdosen IP54 Verbindungsdosen mit 12 Kabeleinführungen grau 340604504 Kunststoff',
     price: '9,90 EUR',
@@ -328,7 +337,7 @@ const COST_ENTRIES: CostEntry[] = [
     market: 'Amazon',
     invoice: {
       label: 'Beleg',
-      href: '/documents/20260530_Amazon.pdf',
+      href: '/dokumente/20260529_Abzweigdosen.pdf',
     },
     description: '3 x Kopp Abzweigdose Profi-Pack 10x Aufputz für den Feuchtraum 75 x 75 x 40mm',
     price: '33,69 EUR',
@@ -398,7 +407,7 @@ const COST_ENTRIES: CostEntry[] = [
     market: 'OBI',
     invoice: {
       label: 'Beleg',
-      href: '/documents/20260519_Obi.pdf',
+      href: '/dokumente/20260519_Obi.pdf',
     },
     description: 'Kabelkanal 110 x 60 x 2000mm grau',
     price: '167,77 EUR',
@@ -408,7 +417,7 @@ const COST_ENTRIES: CostEntry[] = [
     market: 'Amazon',
     invoice: {
       label: 'Beleg',
-      href: '/documents/20260518_Scheibe für Fräse.pdf',
+      href: '/dokumente/20260518_Scheibe für Fräse.pdf',
     },
     description: '4 x Bosch Professional Diamanttrennscheibe Standard for Universal (Beton und Mauerwerk, 150 x 22,23 mm, Zubehör Winkelschleifer)',
     price: '49,25 EUR',
@@ -430,7 +439,7 @@ const COST_ENTRIES: CostEntry[] = [
     market: 'Thomas Erfurth',
     invoice: {
       label: 'Beleg',
-      href: '/documents/20260511_Thomas_Erfurth.pdf',
+      href: '/dokumente/20260511_Thomas_Erfurth.pdf',
     },
     description: 'TE-Office 32 Stück Kabel Aufkleber Label Etiketten Selbstklebend',
     price: '5,95 EUR',

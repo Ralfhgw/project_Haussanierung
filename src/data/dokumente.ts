@@ -7,14 +7,13 @@ export const DOCUMENT_FILENAMES = [
   '2026-07-08_Fuchs&Eule - Angebot.pdf',
   '2026-07-08_Fuchs&Eule - Beispiel_Sanierungsfahrplan.pdf',
   '2026-07-08_IRB_Metallbau - Angebot.pdf',
-  '2026-07-28_Elektroverkabelung.pdf',
+  '2028-01-01_Elektroverkabelung.pdf',
   '2028-01-01_Produkt_Knauf_Elektriker-Gips_Datenblatt.pdf',
   '2028-01-01_Produkt_Knauf_SM700PRO_Datenblatt.pdf',
   '2028-01-01_Produkt_Knauf_SM700PRO_Produktinfo.pdf',
   '2028-01-01_Produkt_Knauf_SM700PRO_Zertifikat.pdf',
   '2028-01-01_Produkt_Knauf_Uniflott_Datenblatt.pdf',
-  '2028-01-01_Produkt_Knauf_Uniflott_Sicherheitsdatenblatt.pdf'
-
+  '2028-01-01_Produkt_Knauf_Uniflott_Sicherheitsdatenblatt.pdf',
 ] as const
 
 export type DocumentDescriptionMap = Record<string, string>
