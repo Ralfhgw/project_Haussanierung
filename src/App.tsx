@@ -54,7 +54,7 @@ const TAB_ITEMS: { id: Tab; label: string; icon: IconType }[] = [
 
 const PROJECT_STATS: { label: string; value: string; icon: IconType }[] = [
   { label: 'Projektphase', value: 'Innenausbau (Stromnetzerneuerung)', icon: Hammer },
-  { label: 'Nächster Termin', value: '17.07.2026 - Energetische Objektbesichtigung', icon: CalendarClock },
+  { label: 'Nächster Termin', value: '13.08.2026 10:30 Uhr - Online Auswertung Energiefahrplan', icon: CalendarClock },
   { label: 'Dokumentation', value: 'Firmenverträge und -rechnungen sind über den Tab Dokumente einsehbar. Enstandene Materialkosten sind über den Tab Kosten abrufbar.', icon: FolderOpen },
 ]
 
@@ -67,7 +67,7 @@ const PROJECT_AREAS: ProjectArea[] = [
   {
     title: 'Aktuelles',
     icon: Bell,
-    text: 'Die Grundreinigung der Wände in WZ, GZ, SW ist abgeschlossen. Es beginnt die Tiefengrundierung und Kabelverlegung.' ,
+    text: 'Energiefahrplan von Fuchs&Eule ist fertig. Die Grundreinigung der Wände in WZ, GZ, SW ist abgeschlossen. Es beginnt die Tiefengrundierung und Kabelverlegung.' ,
   },
   {
     title: 'Abstimmungen',
@@ -95,6 +95,12 @@ const PROJECT_AREAS: ProjectArea[] = [
           'Vor-Ort-Termin in nächster Zeit zur Qualitätskontrolle',
           'Firma erstellt den Sanierungsfahrplan, danach gibt es ein letztes Gespräch, bevor die Förderbescheinigung ausgehändigt wird.',
           'Die Maßnahmen für die Umsetzung sind dann förderfähig, müssen aber von einem lizensierten Fachmann kontrolliert werden. Fuchs & Eule kann es übernehmen.'
+        ],
+      },
+      {
+        label: '13.08.2026 - Telefongespräch Energieberatung Fuchs & Eule',
+        children: [
+          'Termin 10:30 Uhr - Gespräch mit Christian Enderes',
         ],
       },
     ],

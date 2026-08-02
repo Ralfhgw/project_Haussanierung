@@ -43,14 +43,14 @@ const COST_ENTRIES: CostEntry[] = [
     price: '2,99 EUR',
   },
   {
-    date: '29.07.2026',
-    market: 'OBI',
+    date: '31.07.2026',
+    market: 'Hornbach',
     invoice: {
       label: 'Beleg',
       href: null,
     },
-    description: 'Knauf Bau- & Elektriker -Gips 5 kg',
-    price: '7,29 EUR',
+    description: '10 x Acryl-Tiefengrund konservierungsmittelfrei farblos 10 l',
+    price: '149,50 EUR',
   },
   {
     date: '29.07.2026',

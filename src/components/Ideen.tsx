@@ -180,7 +180,7 @@ export default function Ideen() {
     <section className={'ideen'}>
       <div className={'ideen-header'}>
         <p className={'ideen-kicker'}>Ideen</p>
-        <h3>Ideensammlung und weiterfuehrende Inhalte</h3>
+        <h3>Ideensammlung und weiterführende Inhalte</h3>
         <p>
           Interne Inhalte aus <code>/public/ideen</code> werden direkt im jeweiligen
           Artikel gezeigt. Externe Verweise bleiben als Links erhalten und öffnen sich
