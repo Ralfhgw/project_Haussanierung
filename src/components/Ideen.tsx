@@ -37,6 +37,35 @@ const IDEA_CHAPTERS: IdeaChapter[] = [
       },
     ],
   },
+    {
+    title: 'Wohnzimmertür',
+    summary:
+      'Türansicht.',
+    notes: [
+'Mit einer vorstehende Griffstange nutzen, muss  dass das Türblatt im geöffneten Zustand um ca. 10 cm bis 13 cm in die Wandöffnung hineinragt, um genug Sicherheitsabstand für Ihre Finger zu gewährleisten.',
+'Hier sind die zwei sinnvollsten Kombinationen, berechnet nach den GRIFFWERK-Planungsrichtlinien:',
+'',
+'Variante A: Planen mit dem Standard-Flügel (935 mm)',
+'Empfohlene Breite der Wandöffnung: 83,5 cm (Das ergibt den perfekten Rundum-Überstand von je 5 cm links und rechts zur optimalen Abdichtung).',
+'Effektiver Durchgang bei geöffneter Tür: ca. 71 cm bis 73 cm (Das Glas stoppt ca. 11–13 cm vor dem Wandrand, damit die Griffstange nicht anschlägt).',
+'Benötigter freier Schiebebereich an der Wand: mindestens 94 cm (besser 100 cm).',
+'Fazit: Gut geeignet für kleinere Räume, allerdings ist der Durchgang für den Transport sperriger Möbel recht schmal.',
+'',
+'Variante B: Der Komfort-Weg mit dem größeren Flügel (1060 mm)',
+'Empfohlene Breite der Wandöffnung: 91 cm (Ergibt barrierefreie Maße und einen sauberen Glasüberstand an den Seiten).',
+'Effektiver Durchgang bei geöffneter Tür: ca. 78 cm bis 81 cm (Obwohl das Glas wegen der Griffstange 11–13 cm in die Öffnung hineinragt, bleibt Ihnen ein vollwertiges Durchgangsmaß).',
+'Benötigter freier Schiebebereich an der Wand: mindestens 106 cm (besser 112 cm).',
+'Fazit: Die ideale Lösung für Durchgänge, durch die man häufiger hindurchgeht oder Gegenstände trägt.'
+
+    ],
+    links: [
+      {
+        label: 'Türansicht',
+        href: '/ideen/door.png',
+        type: 'intern',
+      },
+    ],
+  },
   {
     title: 'Förderung und Nachweise',
     summary:
