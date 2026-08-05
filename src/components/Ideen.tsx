@@ -39,69 +39,34 @@ const IDEA_CHAPTERS: IdeaChapter[] = [
   },
     {
     title: 'Wohnzimmertür',
-    summary:
-      'Türansicht.',
+    summary: 'Türansicht.',
     notes: [
-'Mit einer vorstehende Griffstange nutzen, muss  dass das Türblatt im geöffneten Zustand um ca. 10 cm bis 13 cm in die Wandöffnung hineinragt, um genug Sicherheitsabstand für Ihre Finger zu gewährleisten.',
-'Hier sind die zwei sinnvollsten Kombinationen, berechnet nach den GRIFFWERK-Planungsrichtlinien:',
-'',
-'Variante A: Planen mit dem Standard-Flügel (935 mm)',
-'Empfohlene Breite der Wandöffnung: 83,5 cm (Das ergibt den perfekten Rundum-Überstand von je 5 cm links und rechts zur optimalen Abdichtung).',
-'Effektiver Durchgang bei geöffneter Tür: ca. 71 cm bis 73 cm (Das Glas stoppt ca. 11–13 cm vor dem Wandrand, damit die Griffstange nicht anschlägt).',
-'Benötigter freier Schiebebereich an der Wand: mindestens 94 cm (besser 100 cm).',
-'Fazit: Gut geeignet für kleinere Räume, allerdings ist der Durchgang für den Transport sperriger Möbel recht schmal.',
-'',
-'Variante B: Der Komfort-Weg mit dem größeren Flügel (1060 mm)',
-'Empfohlene Breite der Wandöffnung: 91 cm (Ergibt barrierefreie Maße und einen sauberen Glasüberstand an den Seiten).',
-'Effektiver Durchgang bei geöffneter Tür: ca. 78 cm bis 81 cm (Obwohl das Glas wegen der Griffstange 11–13 cm in die Öffnung hineinragt, bleibt Ihnen ein vollwertiges Durchgangsmaß).',
-'Benötigter freier Schiebebereich an der Wand: mindestens 106 cm (besser 112 cm).',
-'Fazit: Die ideale Lösung für Durchgänge, durch die man häufiger hindurchgeht oder Gegenstände trägt.'
-
+    'Es gibt zwei unterschiedliche Türblattbreiten. In diesem speziellen Einsatzfall muss geprüft werden, ob die breite Variante in Frage kommt.',
     ],
     links: [
       {
         label: 'Türansicht',
-        href: '/ideen/door.png',
+        href: '/ideen/Tuer.txt',
+        type: 'intern',
+      },
+      {
+        label: 'Türansicht',
+        href: '/ideen/Tuer.png',
         type: 'intern',
       },
     ],
   },
-  {
-    title: 'Förderung und Nachweise',
-    summary:
-      'Sammlung fuer Unterlagen, Förderwege und offene Fragen, die vor einer Umsetzung sauber geklärt werden sollten.',
+    {
+    title: 'Durchreiche zwischen Küche und Wohnzimmer',
+    summary: 'Ansicht als Beispiel',
     notes: [
-      'Förderfähige Massnahmen und Reihenfolge frueh abstimmen.',
-      'Nachweise und Vollmachten gesammelt an einer Stelle ablegen.',
-      'Zeitkritische Punkte fuer BAFA oder Energieberatung dokumentieren.',
+    'Wie hatten uns auf eine Größe von etwa Breite/Höhe von 80/90 cm verständigt.',
     ],
     links: [
       {
-        label: 'Projektnotiz im Ideen-Ordner',
-        href: '/ideen/Hinweise.txt',
+        label: 'Durchreiche',
+        href: '/ideen/Durchreiche.png',
         type: 'intern',
-      },
-      {
-        label: 'BAFA - Energie im Gebäude',
-        href: 'https://www.bafa.de/de/energie/gebaeude',
-        type: 'extern',
-      },
-    ],
-  },
-
-  {
-    title: 'Inspiration und Recherche',
-    summary:
-      'Bereich fuer externe Quellen, Herstellerseiten oder Vergleichsseiten, die später noch einmal gebraucht werden können.',
-    notes: [
-      'Nur belastbare Quellen aufnehmen und kurz kommentieren.',
-      'Bei jeder Quelle notieren, warum sie relevant ist.',
-    ],
-    links: [
-      {
-        label: 'Praxiswissen Modernisierung - Verbraucherzentrale',
-        href: 'https://www.verbraucherzentrale.de/wissen/energie',
-        type: 'extern',
       },
     ],
   },
