@@ -13,7 +13,6 @@ import {
   Lightbulb,
   Lock,
   LogOut,
-  PanelsTopLeft,
   Ruler,
   Target,
   TrendingUp,
@@ -49,7 +48,7 @@ const TAB_ITEMS: { id: Tab; label: string; icon: IconType }[] = [
   { id: 'dokumente', label: 'Dokumente', icon: FileText },
   { id: 'fotos', label: 'Fotos', icon: Images },
   { id: 'ideen', label: 'Ideen', icon: Lightbulb },
-  { id: 'atg', label: 'ATG', icon: PanelsTopLeft },
+/*   { id: 'atg', label: 'ATG', icon: PanelsTopLeft }, */
 ]
 
 const PROJECT_STATS: { label: string; value: string; icon: IconType }[] = [
@@ -101,6 +100,12 @@ const PROJECT_AREAS: ProjectArea[] = [
         label: '13.08.2026 - Telefongespräch Energieberatung Fuchs & Eule',
         children: [
           'Termin 10:30 Uhr - Gespräch mit Christian Enderes',
+          'Fachplanungskosten (und weitere Gewerke wie Architekt und Co.) zu 50 % gefördert werden.', 
+          'Die Kosten der Fördermittelbegleitung hängen dabei vom Investitionsvolumen der jeweiligen Maßnahme ab:', 
+          '2.500,00 bis 5.000,00 € Investitionsvolumen --> 600,00 € Gesamtpreis  --> 50 % Förderung => 300,00 € Ihr Eigenanteil',
+          '5.000,01 € 24.999,99 € Investitionsvolumen --> 989,00 € Gesamtpreis -->  50 % Förderung => 494,5 € Ihr Eigenanteil',
+          '> 25.000,00 Investitionsvolumen --> 4 % der Auftragssumme = Gesamtpreis -->  50 % Förderung => 2 % der Auftragssumme Ihr Eigenanteil',
+          'Heizungstausch über die KfW --> 989,00 € Pauschalpreis --> keine Förderung => 989,00 € Ihr Eigenanteil',
         ],
       },
     ],
