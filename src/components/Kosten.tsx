@@ -13,34 +13,34 @@ type CostEntry = {
 
 const COST_ENTRIES: CostEntry[] = [
   {
-    date: '--',
+    date: '20.08.2026',
     market: 'Toom',
     invoice: {
       label: 'Beleg',
       href: null,
     },
-    description: '3151236 - Schnellputzleiste verzinkt 2500 x 6 x 20 mm',
-    price: '2,49 EUR',
+    description: 'Px PU White 500ml',
+    price: '8,99 EUR',
   },
   {
-    date: '--',
+    date: '19.08.2026',
     market: 'Toom',
     invoice: {
       label: 'Beleg',
       href: null,
     },
-    description: '3157198 - Innenputzeckleiste 150 x 3,5 x 3,5 cm',
-    price: '1,49 EUR',
+    description: 'Glättekelle 10x1',
+    price: '10,49 EUR',
   },
   {
-    date: '--',
+    date: '14.08.2026',
     market: 'Toom',
     invoice: {
       label: 'Beleg',
       href: null,
     },
-    description: '3150088 - PVC-Eckschutzprofil 250 x 2,3 x 2,3 cm',
-    price: '2,99 EUR',
+    description: 'Bau- und Elektrikergips 10kg',
+    price: '9,79 EUR',
   },
   {
     date: '31.07.2026',

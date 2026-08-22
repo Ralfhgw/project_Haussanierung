@@ -28,6 +28,10 @@ import Kosten from './components/Kosten'
 import './App.css'
 
 const AUTH_KEY = 'haussanierung-auth-token'
+
+const normalizePath = (pathname: string) =>
+  pathname.replace(/\/+/g, '/').replace(/\/$/, '') || '/'
+
 type Tab = 'start' | 'kosten' | 'dokumente' | 'fotos' | 'ideen' | 'atg'
 type IconType = typeof LayoutDashboard
 type ExpandableListItem = {
@@ -177,6 +181,9 @@ function App() {
     if (typeof window === 'undefined') return false
     return Boolean(window.localStorage.getItem(AUTH_KEY))
   })
+  const currentPath =
+    typeof window === 'undefined' ? '/' : normalizePath(window.location.pathname)
+  const isAtgRoute = currentPath === '/atg'
 
   const handleLogin = async () => {
     setError('')
@@ -275,6 +282,16 @@ function App() {
               {loading ? 'Login läuft...' : 'Login'}
             </button>
           </form>
+        </section>
+      </main>
+    )
+  }
+
+  if (isAtgRoute) {
+    return (
+      <main className="content-page">
+        <section className="tab-content">
+          <Atg />
         </section>
       </main>
     )
