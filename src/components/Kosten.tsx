@@ -485,6 +485,97 @@ const COST_ENTRIES: CostEntry[] = [
     price: '17,99 EUR',
   },
   {
+    date: '19.11.2025',
+    market: 'REMONDIS',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Entsorgung Dämmmaterial 100 kg',
+    price: '58,31 EUR',
+  },
+  {
+    date: '19.11.2025',
+    market: 'REMONDIS',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Entsorgung Dämmmaterial 60 kg',
+    price: '42,84 EUR',
+  },
+  {
+    date: '18.11.2025',
+    market: 'REMONDIS',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Entsorgung Dämmmaterial 80 kg',
+    price: '50,58 EUR',
+  },
+  {
+    date: '14.11.2025',
+    market: 'REMONDIS',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Entsorgung Dämmmaterial 90 kg',
+    price: '54,44 EUR',
+  },
+  {
+    date: '13.11.2025',
+    market: 'REMONDIS',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Entsorgung Dämmmaterial 20 kg',
+    price: '27,37 EUR',
+  },
+  {
+    date: '12.11.2025',
+    market: 'REMONDIS',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Entsorgung Dämmmaterial 40 kg',
+    price: '35,11 EUR',
+  },
+  {
+    date: '11.11.2025',
+    market: 'REMONDIS',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Entsorgung Dämmmaterial 40 kg',
+    price: '35,11 EUR',
+  },
+  {
+    date: '10.11.2025',
+    market: 'REMONDIS',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Entsorgung Dämmmaterial 60 kg',
+    price: '42,84 EUR',
+  },
+  {
+    date: '06.11.2025',
+    market: 'REMONDIS',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Entsorgung Dämmmaterial 50 kg',
+    price: '38,97 EUR',
+  },
+
+  {
     date: '11.10.2025',
     market: 'toom',
     invoice: {
