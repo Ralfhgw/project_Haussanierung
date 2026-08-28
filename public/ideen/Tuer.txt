@@ -1,14 +1,56 @@
 Mit einer vorstehende Griffstange nutzen, muss dass das Türblatt im geöffneten Zustand um ca. 10 cm bis 13 cm in die Wandöffnung hineinragt, um genug Sicherheitsabstand für Ihre Finger zu gewährleisten.
 Hier sind die zwei sinnvollsten Kombinationen, berechnet nach den GRIFFWERK-Planungsrichtlinien:
 
-Variante A: Planen mit dem Standard-Flügel (935 mm)
-- Empfohlene Breite der Wandöffnung: 83,5 cm (Das ergibt den perfekten Rundum-Überstand von je 5 cm links und rechts zur optimalen Abdichtung).
-- Effektiver Durchgang bei geöffneter Tür: ca. 71 cm bis 73 cm (Das Glas stoppt ca. 11–13 cm vor dem Wandrand, damit die Griffstange nicht anschlägt).
-- Benötigter freier Schiebebereich an der Wand: mindestens 94 cm (besser 100 cm).
+## Variante A: Planen mit dem Standard-Flügel (935 mm)
+
+- OHNE ZARGE (Reiner Wanddurchbruch):
+Empfohlene Breite der Wandöffnung: 83,5 cm 
+(Das ergibt den perfekten Rundum-Überstand von je 5 cm links und rechts zur optimalen Abdichtung).
+
+- MIT ZARGE (Bestehend oder geplant):
+Empfohlene Breite der Wandöffnung für den Zargeneinbau: ca. 91 cm 
+(Standard-Maueröffnungsmaß für eine 86er Zarge).
+
+- Lichtes Durchgangsmaß der Zarge: ca. 84,3 cm bis 85 cm 
+(Das Glas hat dann links und rechts ca. 4 bis 4,5 cm Überstand und deckt die Zargenöffnung perfekt ab).
+
+- Gemeinsame Komfort- und Platzmaße:
+Effektiver Durchgang bei geöffneter Tür: ca. 71 cm bis 73 cm 
+(Das Glas stoppt ca. 11–13 cm vor dem Wandrand, damit die Griffstange nicht anschlägt).
+Benötigter freier Schiebebereich an der Wand: mindestens 94 cm (besser 100 cm).
+
 - Fazit: Gut geeignet für kleinere Räume, allerdings ist der Durchgang für den Transport sperriger Möbel recht schmal.
 
-Variante B: Der Komfort-Weg mit dem größeren Flügel (1060 mm)
-- Empfohlene Breite der Wandöffnung: 91 cm (Ergibt barrierefreie Maße und einen sauberen Glasüberstand an den Seiten).
-- Effektiver Durchgang bei geöffneter Tür: ca. 78 cm bis 81 cm (Obwohl das Glas wegen der Griffstange 11–13 cm in die Öffnung hineinragt, bleibt Ihnen ein vollwertiges Durchgangsmaß).
-- Benötigter freier Schiebebereich an der Wand: mindestens 106 cm (besser 112 cm).
-- Fazit: Die ideale Lösung für Durchgänge, durch die man häufiger hindurchgeht oder Gegenstände trägt.
+## Variante B: Der Komfort-Weg mit dem größeren Flügel (1060 mm)
+
+- OHNE ZARGE (Reiner Wanddurchbruch):
+Empfohlene Breite der Wandöffnung: max. 87,5 cm 
+(Ergibt barrierefreie Maße und einen sauberen Glasüberstand an den Seiten).
+
+- MIT ZARGE (Bestehend oder geplant):
+Empfohlene Breite der Wandöffnung für den Zargeneinbau: ca. 91 cm 
+(Standard-Maueröffnungsmaß für eine 86er Zarge).
+Lichtes Durchgangsmaß der Zarge: ca. 84,3 cm bis 85 cm 
+(Weil das Glas hier mit 1060 mm deutlich breiter ist, ergibt sich ein großzügiger Überstand von über 10 cm pro Seite – 
+ideal für maximalen Sichtschutz und Schallschutz an der Zarge).
+
+Gemeinsame Komfort- und Platzmaße:
+Effektiver Durchgang bei geöffneter Tür: ca. 71 cm bis 74 cm bei einer Zarge 
+(Da das breitere Glas beim Öffnen ebenfalls wegen der Griffstange stoppt, schiebt es sich nicht komplett hinter die Zarge zurück. 
+Der Durchgang wird hier durch die Zargenöffnung begrenzt).
+
+Benötigter freier Schiebebereich an der Wand: mindestens 106 cm (besser 112 cm).
+
+- Fazit: Die ideale Lösung für maximalen Sichtschutz bei einer Zarge und absolut perfekt, 
+wenn Sie an der Wand genügend Platz für den großen Schiebebereich haben.
+
+## Höhenmaße (Gilt für alle Varianten)Berechnung der Durchgangshöhe: 2058 mm (Glashöhe) - 33 mm = 2025 mm.
+
+- OHNE ZARGE: Die reine Wandöffnung muss eine Höhe von 2025 mm (ab Oberkante fertiger Fußboden) haben.
+
+- MIT ZARGE: Die Wandöffnung für den Zargeneinbau muss ca. 2005 mm hoch sein. 
+Das lichte Innenmaß der eingebauten Zarge beträgt dann standardmäßig 1983 mm. 
+Das 2058 mm hohe Glas steht oben perfekt über die Zarge über.
+
+Montage-Hinweis: Die Laufschiene wird inklusive des Distanzprofils für Zargen komplett über dem oberen Zargenrahmen an der Ziegelwand montiert 
+(Montagehöhe der Schienenoberkante liegt bei ca. 210 bis 212 cm).
