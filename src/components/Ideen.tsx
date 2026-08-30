@@ -54,13 +54,18 @@ const IDEA_CHAPTERS: IdeaChapter[] = [
         href: '/ideen/Tuer.png',
         type: 'intern',
       },
+      {
+        label: 'Montage mit PLANEO X60',
+        href: '/ideen/Tuermontage.png',
+        type: 'intern',
+      },
     ],
   },
     {
     title: 'Durchreiche zwischen Küche und Wohnzimmer',
     summary: 'Ansicht als Beispiel',
     notes: [
-    'Wie hatten uns auf eine Größe von etwa Breite/Höhe von 80/90 cm verständigt.',
+    'Wie hatten uns auf Variante 2 verständigt. Hier können wir einen geraden Standardsturz verwenden',
     ],
     links: [
       {

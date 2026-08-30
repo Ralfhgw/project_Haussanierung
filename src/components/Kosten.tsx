@@ -13,6 +13,16 @@ type CostEntry = {
 
 const COST_ENTRIES: CostEntry[] = [
   {
+    date: '24.08.2026',
+    market: 'Toom',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Maske Aura 93200',
+    price: '10,49 EUR',
+  },
+  {
     date: '20.08.2026',
     market: 'Toom',
     invoice: {
