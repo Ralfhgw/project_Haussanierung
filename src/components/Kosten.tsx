@@ -13,6 +13,16 @@ type CostEntry = {
 
 const COST_ENTRIES: CostEntry[] = [
   {
+    date: '31.08.2026',
+    market: 'Toom',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Zementmörtel 25kg',
+    price: '6,19 EUR',
+  },
+  {
     date: '24.08.2026',
     market: 'Toom',
     invoice: {
@@ -21,6 +31,16 @@ const COST_ENTRIES: CostEntry[] = [
     },
     description: 'Maske Aura 93200',
     price: '10,49 EUR',
+  },
+    {
+    date: '21.08.2026',
+    market: 'Hornbach',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: '32 x Knauf SM700 Pro Putzmörtel 25 kg',
+    price: '1.084,80 EUR',
   },
   {
     date: '20.08.2026',
@@ -199,7 +219,7 @@ const COST_ENTRIES: CostEntry[] = [
       label: 'Beleg',
       href: '/dokumente/20260704_Hornbach.pdf',
     },
-    description: 'Knauf SM700 PRO Klebe- und Armiermörtel weiß 25kg Pal.= 42 Sack',
+    description: 'Knauf SM700 PRO Klebe- und Armiermörtel weiß 25kg',
     price: '339 EUR',
   },
   {

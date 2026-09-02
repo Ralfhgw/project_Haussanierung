@@ -37,6 +37,34 @@ const IDEA_CHAPTERS: IdeaChapter[] = [
       },
     ],
   },
+      {
+    title: 'Durchreiche zwischen Küche und Wohnzimmer',
+    summary: 'Ansicht als Beispiel',
+    notes: [
+    'Wie hatten uns auf Variante 2 verständigt. Hier können wir einen geraden Standardsturz verwenden',
+    ],
+    links: [
+      {
+        label: 'Durchreiche',
+        href: '/ideen/Durchreiche.png',
+        type: 'intern',
+      },
+    ],
+  },
+  {
+       title: 'Keller Wandsanierung',
+    summary: 'Anwendung Putz',
+    notes: [
+    'Je nachdem, wie tief die Löcher im Mauerwerk sind, unterscheidet sich der Einsatz von Stens Haft, Stens Grund oder Knauf Popo: Tiefe Löcher & ausgebrochene Fugen (> 20 mm):Spritzen Sie die Löcher zuerst mit Stens Haft aus (Haftbrücke).Füllen Sie die tiefen Ausbrüche danach mit Stens Grund bündig zum restlichen Mauerwerk auf. Stens Grund ist genau dafür da, große Unebenheiten statisch sicher und salzresistent auszugleichen.Flache Schadstellen (< 20 mm):Bewerfen Sie die Stellen netzförmig mit Stens Haft.Nach der Trocknung füllen Sie die Stellen direkt mit Knauf Popo auf.',
+    ],
+    links: [
+      {
+        label: 'Kelleransicht',
+        href: '/ideen/Keller.png',
+        type: 'intern',
+      },
+    ], 
+  },
     {
     title: 'Wohnzimmertür',
     summary: 'Türansicht.',
@@ -61,20 +89,7 @@ const IDEA_CHAPTERS: IdeaChapter[] = [
       },
     ],
   },
-    {
-    title: 'Durchreiche zwischen Küche und Wohnzimmer',
-    summary: 'Ansicht als Beispiel',
-    notes: [
-    'Wie hatten uns auf Variante 2 verständigt. Hier können wir einen geraden Standardsturz verwenden',
-    ],
-    links: [
-      {
-        label: 'Durchreiche',
-        href: '/ideen/Durchreiche.png',
-        type: 'intern',
-      },
-    ],
-  },
+
 ]
 
 const IMAGE_EXTENSIONS = ['.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg']

@@ -20,7 +20,6 @@ export const PHOTO_ENTRIES: readonly PhotoEntry[] = [
   { filename: '20250306_110920.jpg', description: '' },
   { filename: '20250311_104058.jpg', description: '' },
   { filename: '20250311_104108.jpg', description: '' },
-  { filename: '20250317_094237.jpg', description: '' },
   { filename: '20250317_122626.jpg', description: '' },
   { filename: '20250317_124821.jpg', description: '' },
   { filename: '20250317_130638.jpg', description: '' },
@@ -150,4 +149,5 @@ export const PHOTO_ENTRIES: readonly PhotoEntry[] = [
   { filename: '20260825_181812.jpg', description: 'Estrich im Wohnzimmer' },
   { filename: '20260828_151346.jpg', description: 'Fußbodenhöhe 9cm' },
   { filename: '20260828_151356.jpg', description: 'Estrich ist brüchig und wird deshalb entfernt.' },
+  { filename: '20260901_171653.jpg', description: '' },
 ] as const
