@@ -448,6 +448,12 @@
   align-items: start;
 }
 
+.content-column {
+  display: grid;
+  gap: 20px;
+  align-content: start;
+}
+
 .panel {
   padding: 26px;
 }
@@ -456,6 +462,18 @@
   margin-bottom: 18px;
   display: grid;
   gap: 6px;
+}
+
+.contacts-panel > .panel-heading {
+  margin-bottom: 0;
+}
+
+.contacts-trigger {
+  margin: 0;
+}
+
+.contacts-trigger .section-kicker {
+  color: inherit;
 }
 
 .overview-list {
@@ -574,6 +592,10 @@
 
 .expandable-sublist li {
   line-height: 1.6;
+}
+
+.expandable-sublist li.company-line {
+  list-style: none;
 }
 
 /* ===== Drawing links ===== */

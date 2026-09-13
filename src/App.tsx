@@ -13,6 +13,7 @@ import {
   Lightbulb,
   Lock,
   LogOut,
+  Phone,
   Ruler,
   Target,
   TrendingUp,
@@ -56,7 +57,7 @@ const TAB_ITEMS: { id: Tab; label: string; icon: IconType }[] = [
 ]
 
 const PROJECT_STATS: { label: string; value: string; icon: IconType }[] = [
-  { label: 'Projektphase', value: 'Innenausbau (Stromnetzerneuerung)', icon: Hammer },
+  { label: 'Projektphase', value: 'Innenausbau (Strom, Wände verputzen, Türdurchbruch im Wohnzimmer und Durchreiche zur Küche)', icon: Hammer },
   { label: 'Nächster Termin', value: '13.08.2026 10:30 Uhr - Online Auswertung Energiefahrplan', icon: CalendarClock },
   { label: 'Dokumentation', value: 'Firmenverträge und -rechnungen sind über den Tab Dokumente einsehbar. Enstandene Materialkosten sind über den Tab Kosten abrufbar.', icon: FolderOpen },
 ]
@@ -65,12 +66,12 @@ const PROJECT_AREAS: ProjectArea[] = [
   {
     title: 'Baufortschritt',
     icon: TrendingUp,
-    text: 'Momentan läuft die Erneuerung der Stromleitungen. Es waren ursprünglich Aluminiumkabel verlegt worden und ohne gelb/grün. Deckenplatten wurden im Wohnzimmer entfernt.',
+    text: 'Aktuell werden die Innenwände mit Amierungsgewebe verputzt. Der Türdurchbruch im Wohnzimmer wird gemacht und dafür ein Sturz eingebaut. Die Durchreiche zur Küche wird vergrößert.',
   },
   {
     title: 'Aktuelles',
     icon: Bell,
-    text: 'Energiefahrplan von Fuchs&Eule ist fertig. Die Grundreinigung der Wände in WZ, GZ, SW ist abgeschlossen. Es beginnt die Tiefengrundierung und Kabelverlegung.' ,
+    text: 'Warten auf angebote der Heizungsfirmen. Der Estrich aus dem Wohnzimmer wird entfernt werden.' ,
   },
   {
     title: 'Abstimmungen',
@@ -110,8 +111,123 @@ const PROJECT_AREAS: ProjectArea[] = [
           '5.000,01 € 24.999,99 € Investitionsvolumen --> 989,00 € Gesamtpreis -->  50 % Förderung => 494,5 € Ihr Eigenanteil',
           '> 25.000,00 Investitionsvolumen --> 4 % der Auftragssumme = Gesamtpreis -->  50 % Förderung => 2 % der Auftragssumme Ihr Eigenanteil',
           'Heizungstausch über die KfW --> 989,00 € Pauschalpreis --> keine Förderung => 989,00 € Ihr Eigenanteil',
+          'Es wurde nachträglich de Aufsparrendämmung als mögliche Maßnahme hinzugefügt.',
         ],
       },
+    ],
+  },
+]
+
+const CONTACTS: ExpandableListItem[] = [
+  {
+    label: 'Einbautüren',
+    children: [
+      'Firma: --- Wilhelm Linnenbecker GmbH & Co. KG  ---',
+      'Kontakt: Michaela Horn',
+      'Telefon: +49 3834 576433',
+      'Mobile:  +49 172 4211678',
+      'E-Mail:  m.horn@ linnenbecker.de',
+      'Termin:  01.09.2026 um 12:00 Uhr in Filiale',
+      'Aktuell: Warten auf das Angebot für die 5 Türen',
+    ],
+  },
+  {
+    label: 'Abrissfirmen',
+    children: [
+      'Firma: --- Thomas Schmidt (Kontakt Basti)---',
+      'Telefon: +49 ...',
+      'Mobile:  +49 176 24138348',
+      'E-Mail:  dkbs.schmidt@icloud.com',
+      'Termin:  04.09.2026 10:00 Uhr',
+      'Aktuell: Angebot für Estrichentsorgung auf Nachfrage, kurzfristig möglich',
+      'Firma: --- Hagemann GmbH ---',
+      'Telefon: +49 38375 229777 ',
+      'Mobile:  +49 172 9006627',
+      'E-Mail:  kalkulation@hagemann-h.de',
+      'Termin:  ',
+      'Aktuell: Angebot per eMail erhalten Estrich Pauschalpreis 2250 €, Betonplatte 1950 €, kurzfristig möglich.',
+      'Firma: --- Bauservice Müller ---',
+      'Telefon: +49 38375 229777 ',
+      'Mobile:  +49 172 6961519',
+      'E-Mail:  kontakt@bauservice-mueller.info',
+      'Termin:  ',
+      'Aktuell: Angebot angefordert',
+    ],
+  },
+  {
+    label: 'Fußboden',
+    children: [
+      'Firma: --- Bodenlegerbetrieb René Goede ---',
+      'Kontakt: René Goede 17506 Gützkow OT Neuendorf',
+      'Telefon: +49 ',
+      'Mobile:  +49 152 02068248',
+      'E-Mail:  https://bodenleger-goede.de/',
+      'Termin:  26.08.2026 10:30 Uhr vor Ort',
+      'Aktuell: Nettes Gespräch, füllt den Estrich auf im Wohnzimmer und verschließt auch die Schlitze',
+      'Firma: --- Fussbodentechnik Greifswald GmbH ---',
+      'Kontakt: 17498 Hinrichshagen Chausseestraße 1',
+      'Telefon: +49 3834 594580',
+      'Mobile:  +49 171 8976723',
+      'E-Mail:  http://www.fussbodentechnik-gmbh.de/',
+      'Termin:  war vor Ort',
+      'Aktuell: Älterer Herr (Harley Typ) - 25€/m2 für Estrich reinkippen',
+    ],
+  },
+  {
+    label: 'Heizung- & Sanitärinstallation',
+    children: [
+      'Firma: --- Sochiera Heizung- & Sanitärinstallation ---',
+      'Kontakt: Lange Reihe 20, 17489 Greifswald',
+      'Telefon: +49 3834 57750',
+      'Mobile:  +49 174 9460245',
+      'E-Mail:  ',
+      'Termin:  02.09.2026 12:00 Uhr',
+      'Aktuell: Erstellt Plan für die Heizung, Vorschlag für RTL Boxen',
+      'Firma: --- (Bastis Kontakt) ---',
+      'Kontakt: ',
+      'Telefon: +49 ',
+      'Mobile:  +49 176 14118608',
+      'E-Mail:  CRS-SHK-Installation@outlook.de',
+      'Termin:  war vor Ort',
+      'Aktuell: Macht ein Angebot.',
+      'Firma: --- Eichhorst & Krempin Heizung und Sanitär GmbH ---',
+      'Kontakt: Am Koppelberg 1B, 17489 Greifswald',
+      'Telefon: +49 3834 58513',
+      'Mobile:  +49 ',
+      'E-Mail:  ',
+      'Termin:  Termin 17.09. 07:30-08:00 Uhr',
+      'Aktuell: ',
+    ],
+  },
+  {
+    label: 'Dachdeckerei',
+    children: [
+      'Firma: --- Hollmann Roberto Dachdeckerei ---',
+      'Kontakt: Herderstr. 18 17489 Greifswald',
+      'Telefon: +49',
+      'Mobile:  +49 172 1775195',
+      'E-Mail:  ',
+      'Termin:  24.08.2026 14:00 Uhr',
+      'Aktuell: Würde keine Aufdachdämmung machen',
+    ],
+  },
+  {
+    label: 'Fußbodenheizung',
+    children: [
+      'Firma: --- DML Fußbodenheizung GmbH ---',
+      'Kontakt: Siegufer 1, 53783 Eitorf',
+      'Telefon: +49 800 4100 300',
+      'Mobile:  +49 ',
+      'E-Mail:  info@fussbodenheizung-nachtraeglich-einfraesen.de',
+      'Termin:  01.09.2026 12:00 Uhr',
+      'Aktuell: Unterlagen per eMail zugeschickt, Firma würde nach dem Fräsen auch verschließen, 16-17mm Schlauchdicke 2mm, es muss geprüft werden, ob die Fußböden die gleich Höhe haben.',
+      'Firma: --- ECOtherm GmbH ---',
+      'Kontakt: Kuhlenstraße 42, 26655 Westerstede',
+      'Telefon: +49 4488 5939590',
+      'Mobile:  +49 173 2774738 (Techniker für Probebohrung)',
+      'E-Mail:  info@ecotherm.de',
+      'Termin:  ',
+      'Aktuell: Beispielangebot erhalten, Warte auf Termin für Probebohrung',
     ],
   },
 ]
@@ -228,6 +344,9 @@ function App() {
       [key]: !current[key],
     }))
   }
+
+  const isContactsExpanded = Boolean(expandedItems['Kontakte'])
+
   if (!isAuthenticated) {
     return (
       <main className="auth-page">
@@ -370,65 +489,145 @@ function App() {
             </section>
 
             <section className="content-grid">
-              <article className="panel overview-panel">
-                <div className="panel-heading">
-                  <p className="section-kicker">Überblick</p>
-                </div>
-                <div className="overview-list">
-                  {PROJECT_AREAS.map((area) => {
-                    const AreaIcon = area.icon
-                    return (
-                    <article key={area.title} className="overview-item">
-                      <h4>
-                        <span className="overview-icon" aria-hidden="true">
-                          <AreaIcon size={18} />
-                        </span>
-                        {area.title}
-                      </h4>
-                      {area.text ? <p>{area.text}</p> : null}
-                      {area.items?.length ? (
-                        <ul className="expandable-list">
-                          {area.items.map((item) => {
-                            const itemKey = area.title + '-' + item.label
-                            const isExpanded = Boolean(expandedItems[itemKey])
+              <div className="content-column">
+                <article className="panel overview-panel">
+                  <div className="panel-heading">
+                    <p className="section-kicker">Überblick</p>
+                  </div>
+                  <div className="overview-list">
+                    {PROJECT_AREAS.map((area) => {
+                      const AreaIcon = area.icon
+                      return (
+                      <article key={area.title} className="overview-item">
+                        <h4>
+                          <span className="overview-icon" aria-hidden="true">
+                            <AreaIcon size={18} />
+                          </span>
+                          {area.title}
+                        </h4>
+                        {area.text ? <p>{area.text}</p> : null}
+                        {area.items?.length ? (
+                          <ul className="expandable-list">
+                            {area.items.map((item) => {
+                              const itemKey = area.title + '-' + item.label
+                              const isExpanded = Boolean(expandedItems[itemKey])
 
-                            return (
-                              <li key={itemKey} className="expandable-list-item">
-                                <button
-                                  type="button"
-                                  className="expandable-trigger"
-                                  onClick={() => toggleItem(itemKey)}
-                                  aria-expanded={isExpanded}
-                                >
-                                  <span>{item.label}</span>
-                                  <span
-                                    className={
-                                      isExpanded
-                                        ? 'expandable-icon open'
-                                        : 'expandable-icon'
-                                    }
-                                    aria-hidden="true"
+                              return (
+                                <li key={itemKey} className="expandable-list-item">
+                                  <button
+                                    type="button"
+                                    className="expandable-trigger"
+                                    onClick={() => toggleItem(itemKey)}
+                                    aria-expanded={isExpanded}
                                   >
-                                    <ChevronDown size={18} />
-                                  </span>
-                                </button>
-                                {isExpanded ? (
-                                  <ul className="expandable-sublist">
-                                    {item.children.map((child) => (
-                                      <li key={child}>{child}</li>
-                                    ))}
-                                  </ul>
-                                ) : null}
-                              </li>
-                            )
-                          })}
-                        </ul>
-                      ) : null}
-                    </article>
-                    )
-                  })}
-                </div>
-              </article>
+                                    <span>{item.label}</span>
+                                    <span
+                                      className={
+                                        isExpanded
+                                          ? 'expandable-icon open'
+                                          : 'expandable-icon'
+                                      }
+                                      aria-hidden="true"
+                                    >
+                                      <ChevronDown size={18} />
+                                    </span>
+                                  </button>
+                                  {isExpanded ? (
+                                    <ul className="expandable-sublist">
+                                      {item.children.map((child) => (
+                                        <li key={child}>{child}</li>
+                                      ))}
+                                    </ul>
+                                  ) : null}
+                                </li>
+                              )
+                            })}
+                          </ul>
+                        ) : null}
+                      </article>
+                      )
+                    })}
+                  </div>
+                </article>
+
+                <article className="panel contacts-panel">
+                  <div className="panel-heading">
+                    <button
+                      type="button"
+                      className="expandable-trigger contacts-trigger"
+                      onClick={() => toggleItem('Kontakte')}
+                      aria-expanded={isContactsExpanded}
+                      aria-controls="contacts-list"
+                    >
+                      <span className="section-kicker">
+                      <Phone size={16} aria-hidden="true" />
+                      Kontakte
+                      </span>
+                      <span
+                        className={
+                          isContactsExpanded
+                            ? 'expandable-icon open'
+                            : 'expandable-icon'
+                        }
+                        aria-hidden="true"
+                      >
+                        <ChevronDown size={18} />
+                      </span>
+                    </button>
+                  </div>
+                  {isContactsExpanded ? (
+                    <ul id="contacts-list" className="expandable-list contacts-list">
+                      {CONTACTS.map((contact) => {
+                        const itemKey = 'Kontakte-' + contact.label
+                        const isExpanded = Boolean(expandedItems[itemKey])
+
+                        return (
+                          <li key={itemKey} className="expandable-list-item">
+                            <button
+                              type="button"
+                              className="expandable-trigger"
+                              onClick={() => toggleItem(itemKey)}
+                              aria-expanded={isExpanded}
+                            >
+                              <span>{contact.label}</span>
+                              <span
+                                className={
+                                  isExpanded
+                                    ? 'expandable-icon open'
+                                    : 'expandable-icon'
+                                }
+                                aria-hidden="true"
+                              >
+                                <ChevronDown size={18} />
+                              </span>
+                            </button>
+                            {isExpanded ? (
+                              <ul className="expandable-sublist">
+                                {contact.children.map((child) => (
+                                  <li
+                                    key={child}
+                                    className={
+                                      child.startsWith('Firma:')
+                                        ? 'company-line'
+                                        : undefined
+                                    }
+                                  >
+                                    {child.startsWith('Firma:') ? (
+                                      <strong>{child.replace(/^Firma:\s*/, '')}</strong>
+                                    ) : (
+                                      child
+                                    )}
+                                  </li>
+                                ))}
+                              </ul>
+                            ) : null}
+                          </li>
+                        )
+                      })}
+                    </ul>
+                  ) : null}
+                </article>
+              </div>
 
               <aside className="panel timeline-panel">
                 <div>

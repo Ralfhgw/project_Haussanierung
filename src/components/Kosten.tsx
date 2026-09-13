@@ -13,6 +13,16 @@ type CostEntry = {
 
 const COST_ENTRIES: CostEntry[] = [
   {
+    date: '04.09.2026',
+    market: 'JACOB CEMENT BAUSTOFFE',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: '2 x Ziegelsturz 11,5 x 7,1 x 150cm',
+    price: '26,78 EUR',
+  },
+  {
     date: '31.08.2026',
     market: 'Toom',
     invoice: {
@@ -71,6 +81,16 @@ const COST_ENTRIES: CostEntry[] = [
     },
     description: 'Bau- und Elektrikergips 10kg',
     price: '9,79 EUR',
+  },
+  {
+    date: '03.08.2026',
+    market: 'OBI',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Schrauben Unterputzdosen',
+    price: '4,79 EUR',
   },
   {
     date: '31.07.2026',
