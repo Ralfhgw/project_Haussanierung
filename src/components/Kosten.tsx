@@ -13,6 +13,16 @@ type CostEntry = {
 
 const COST_ENTRIES: CostEntry[] = [
   {
+    date: '14.09.2026',
+    market: 'toom',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Edelputzkratzer',
+    price: '6,00 EUR',
+  },
+  {
     date: '04.09.2026',
     market: 'JACOB CEMENT BAUSTOFFE',
     invoice: {
@@ -31,6 +41,26 @@ const COST_ENTRIES: CostEntry[] = [
     },
     description: 'Zementmörtel 25kg',
     price: '6,19 EUR',
+  },
+  {
+    date: '26.08.2026',
+    market: 'Toom',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Bauschuttsack 75',
+    price: '4,99 EUR',
+  },
+  {
+    date: '26.08.2026',
+    market: 'Toom',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Edelputzkratzer',
+    price: '10,99 EUR',
   },
   {
     date: '24.08.2026',
@@ -152,6 +182,16 @@ const COST_ENTRIES: CostEntry[] = [
     description: '4337256129558 SPS Seko 5,0 x 60',
     price: '17,79 EUR',
   },
+    {
+    date: '22.07.2026',
+    market: 'Toom',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Müllsäcke ',
+    price: '8,49 EUR',
+  },
   {
     date: '17.07.2026',
     market: 'Toom',
@@ -161,6 +201,26 @@ const COST_ENTRIES: CostEntry[] = [
     },
     description: 'Inneneckenkelle, Maurerkelle 180mm, Edelstahlkratzer',
     price: '30,97 EUR',
+  },
+  {
+    date: '16.07.2026',
+    market: 'Obi',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Abdeckplane LDPE 3',
+    price: '6,58 EUR',
+  },
+  {
+    date: '16.07.2026',
+    market: 'Obi',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Gewebeeckwinkel',
+    price: '14,16 EUR',
   },
   {
     date: '16.07.2026',

@@ -58,7 +58,7 @@ const TAB_ITEMS: { id: Tab; label: string; icon: IconType }[] = [
 
 const PROJECT_STATS: { label: string; value: string; icon: IconType }[] = [
   { label: 'Projektphase', value: 'Innenausbau (Strom, Wände verputzen, Türdurchbruch im Wohnzimmer und Durchreiche zur Küche)', icon: Hammer },
-  { label: 'Nächster Termin', value: '13.08.2026 10:30 Uhr - Online Auswertung Energiefahrplan', icon: CalendarClock },
+  { label: 'Nächster Termin', value: 'keine Termine', icon: CalendarClock },
   { label: 'Dokumentation', value: 'Firmenverträge und -rechnungen sind über den Tab Dokumente einsehbar. Enstandene Materialkosten sind über den Tab Kosten abrufbar.', icon: FolderOpen },
 ]
 
@@ -112,6 +112,20 @@ const PROJECT_AREAS: ProjectArea[] = [
           '> 25.000,00 Investitionsvolumen --> 4 % der Auftragssumme = Gesamtpreis -->  50 % Förderung => 2 % der Auftragssumme Ihr Eigenanteil',
           'Heizungstausch über die KfW --> 989,00 € Pauschalpreis --> keine Förderung => 989,00 € Ihr Eigenanteil',
           'Es wurde nachträglich de Aufsparrendämmung als mögliche Maßnahme hinzugefügt.',
+        ],
+      },
+      {
+        label: '17.09.2026 - Vorortbesichtigung mit Ecotherm und Eichhorst & Krempin Heizung und Sanitär GmbH',
+        children: [
+          'Termin 08:00 Uhr - Vorortbesichtigung zum Thema Fußbodenheizung',
+          'Bodenfliesen im Flur, Bad werden entfernt und der Boden wird dann gefräst',
+          'Der Estrich im Wohnzimmer wird gereinigt, dann grundiert, mit Estrich aufgefüllt und gefräst',
+          'Gästezimmer und Küche werden gefräst',
+          'Im Gästezimmer sollte gefräst werden, damit es eben wird.',
+          'Ecotherm verwendet 14mm Schläuche und stellt den Verteiler bereit',
+          'Eichhorst & Krempin muss die Regler bereitstellen, Ecotherm hat nur eine Funklösung',
+          'Der Verteiler wird im Flur eingebaut',
+          'Ein Anschluss für den Wintergarten wird vom Heizungsraum bereitgestellt.', 
         ],
       },
     ],
@@ -194,7 +208,7 @@ const CONTACTS: ExpandableListItem[] = [
       'Kontakt: Am Koppelberg 1B, 17489 Greifswald',
       'Telefon: +49 3834 58513',
       'Mobile:  +49 ',
-      'E-Mail:  ',
+      'E-Mail:  nkhaustechnik@freenet.de',
       'Termin:  Termin 17.09. 07:30-08:00 Uhr',
       'Aktuell: ',
     ],
@@ -224,8 +238,8 @@ const CONTACTS: ExpandableListItem[] = [
       'Firma: --- ECOtherm GmbH ---',
       'Kontakt: Kuhlenstraße 42, 26655 Westerstede',
       'Telefon: +49 4488 5939590',
-      'Mobile:  +49 173 2774738 (Techniker für Probebohrung)',
-      'E-Mail:  info@ecotherm.de',
+      'Mobile:  +49 173 2774738 (Techniker Jannik Hartmann für Probebohrung)',
+      'E-Mail:  info@ecotherm.de, jannik.hartmann@ecotherm.de',
       'Termin:  ',
       'Aktuell: Beispielangebot erhalten, Warte auf Termin für Probebohrung',
     ],
