@@ -142,7 +142,7 @@ const CONTACTS: ExpandableListItem[] = [
       'Mobile:  +49 172 4211678',
       'E-Mail:  m.horn@ linnenbecker.de',
       'Termin:  01.09.2026 um 12:00 Uhr in Filiale',
-      'Aktuell: Warten auf das Angebot für die 5 Türen',
+      'Aktuell: Angebot erhalten, allerdings ist das Glas Gotik weiß nicht mehr im Angebot. Angebot erst einmal pausiert.',
     ],
   },
   {
@@ -159,13 +159,13 @@ const CONTACTS: ExpandableListItem[] = [
       'Mobile:  +49 172 9006627',
       'E-Mail:  kalkulation@hagemann-h.de',
       'Termin:  ',
-      'Aktuell: Angebot per eMail erhalten Estrich Pauschalpreis 2250 €, Betonplatte 1950 €, kurzfristig möglich.',
+      'Aktuell: Angebot per eMail erhalten Estrich Pauschalpreis 2250 €, Betonplatte 1950 €, kurzfristig möglich. Abriss am 18.09.2026 beauftragt.',
       'Firma: --- Bauservice Müller ---',
       'Telefon: +49 38375 229777 ',
       'Mobile:  +49 172 6961519',
       'E-Mail:  kontakt@bauservice-mueller.info',
       'Termin:  ',
-      'Aktuell: Angebot angefordert',
+      'Aktuell: Angebot erhalten',
     ],
   },
   {
@@ -177,7 +177,18 @@ const CONTACTS: ExpandableListItem[] = [
       'Mobile:  +49 152 02068248',
       'E-Mail:  https://bodenleger-goede.de/',
       'Termin:  26.08.2026 10:30 Uhr vor Ort',
-      'Aktuell: Nettes Gespräch, füllt den Estrich auf im Wohnzimmer und verschließt auch die Schlitze',
+      'Aktuell: Nettes Gespräch, füllt den Estrich auf im Wohnzimmer und verschließt auch die Schlitze, eMail am 21.09.2026 für Angebot gesendet.',
+
+      'Firma: --- Meisterbetrieb Krauss---',
+      'Kontakt: Roy Krauss',
+      'Telefon: +49 38375 20543',
+      'Mobile:  ',
+      'E-Mail:  http://bodenleger-krauss.de/',
+      'Termin:  ',
+      'Aktuell: eMail am 21.09.2026 für Angebot gesendet.',
+
+
+
       'Firma: --- Fussbodentechnik Greifswald GmbH ---',
       'Kontakt: 17498 Hinrichshagen Chausseestraße 1',
       'Telefon: +49 3834 594580',
