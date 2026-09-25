@@ -13,6 +13,16 @@ type CostEntry = {
 
 const COST_ENTRIES: CostEntry[] = [
   {
+    date: '23.09.2026',
+    market: 'ECOtherm',
+    invoice: {
+      label: 'Beleg',
+      href: null,
+    },
+    description: 'Vor-Ort-Termin für Probebohrung',
+    price: '59,50 EUR',
+  },
+  {
     date: '14.09.2026',
     market: 'toom',
     invoice: {
