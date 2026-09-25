@@ -159,7 +159,7 @@ const CONTACTS: ExpandableListItem[] = [
       'Mobile:  +49 172 9006627',
       'E-Mail:  kalkulation@hagemann-h.de',
       'Termin:  ',
-      'Aktuell: Angebot per eMail erhalten Estrich Pauschalpreis 2250 €, Betonplatte 1950 €, kurzfristig möglich. Abriss am 18.09.2026 beauftragt.',
+      'Aktuell: Angebot per eMail erhalten Estrich Pauschalpreis 2250 €, Betonplatte 1950 €, kurzfristig möglich. Abriss am 18.09.2026 beauftragt, 24.09.2026 VorOrt-Besichtigung und Termin für Abriss voraussichtlich der 28.09.2026',
       'Firma: --- Bauservice Müller ---',
       'Telefon: +49 38375 229777 ',
       'Mobile:  +49 172 6961519',
@@ -176,16 +176,33 @@ const CONTACTS: ExpandableListItem[] = [
       'Telefon: +49 ',
       'Mobile:  +49 152 02068248',
       'E-Mail:  https://bodenleger-goede.de/',
-      'Termin:  26.08.2026 10:30 Uhr vor Ort',
-      'Aktuell: Nettes Gespräch, füllt den Estrich auf im Wohnzimmer und verschließt auch die Schlitze, eMail am 21.09.2026 für Angebot gesendet.',
+      'Termin:  ',
+      'Aktuell: Nettes Gespräch beim VorOrt-Termin am 26.08.2026, füllt den Estrich auf im Wohnzimmer und verschließt auch die Schlitze, eMail am 21.09.2026 für Angebot gesendet. VorOrt-Termin am 24.09.2026, es wird ein Angebot erstellt für das Auslegen von THOMSIT HYDRO HEAT',
 
-      'Firma: --- Meisterbetrieb Krauss---',
+      'Firma: --- Bauteam Vorpommern UG ---',
+      'Kontakt: Jahnstr. Ausbau 7, 18574 Garz',
+      'Telefon: +49 38304 642029',
+      'Mobile:  ',
+      'E-Mail:  info@bauteam-vorpommern.de',
+      'Termin:  25.09.2026 11:00 Uhr',
+      'Aktuell: Kontaktaufnahme über MyHammer am 22.09.2026',
+
+      'Firma: --- AMD Bau GmbH ---',
+      'Kontakt: Matthias Dudda Greifswalder Straße 48, 17498 Hinrichshagen',
+      'Telefon: +491731678835',
+      'Mobile:  ',
+      'E-Mail:  https://www.amd-baugmbh.de/',
+      'Termin:  25.09.2026 09:00 Uhr',
+      'Aktuell: Kontaktaufnahme über MyHammer am 21.09.2026',
+
+      'Firma: --- Meisterbetrieb Krauss ---',
       'Kontakt: Roy Krauss',
       'Telefon: +49 38375 20543',
       'Mobile:  ',
       'E-Mail:  http://bodenleger-krauss.de/',
       'Termin:  ',
       'Aktuell: eMail am 21.09.2026 für Angebot gesendet.',
+
 
 
 
